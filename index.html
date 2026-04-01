@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">  
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>bluboeb's dreamworlds</title>
+        <link rel="stylesheet" href="hub.css">
+        <script src="https://iframe.chat/scripts/main.min.js"></script>
+        <script src="backgrounds.js"></script>
+        <script src="musicplayer.js"></script>
+        <script src="carousel.js"></script>
+    </head>
+    <body>
+        <header class="simplecontainer">
+            <a href="index.html">
+                <h1>bluboeb's dreamworlds</h1>
+            </a>
+        </header>
+
+        <p class="text">
+            hi<br><br>
+            i'm making worlds
+        </p>
+
+        <nav class="simplecontainer">
+            <ul>
+                <li><a href="index.html">hub</a></li>
+                <li>|</li>
+                <li><a href="aboutme.html">about me</a></li>
+                <li>|</li>
+                <li><a href="blog.html">blog</a></li>
+                <li>|</li>
+                <li><a href="artprojects.html">art projects</a></li>
+                <li>|</li>
+                <li><a href="photography.html">photography</a></li>
+            </ul>
+        </nav>
+
+        <main>
+
+            <section id="microblog" class="simplecontainer">
+                <h2>microblog</h2>
+                <div id="posts" class="content">
+                    <div class="entry">
+                        <p class="date"">03-26-26</p>
+                        <p class="entrycontent">today i went to the store and found out something really cool :)</p>
+                    </div>
+                    <div class="entry">
+                        <p class="date"">03-26-26</p>
+                        <p class="entrycontent">i'm making worlds</p>
+                    </div>
+                    <div class="entry">
+                        <p class="date"">03-26-26</p>
+                        <p class="entrycontent">i'm making worlds</p>
+                    </div>
+                    <div class="entry">
+                        <p class="date"">03-26-26</p>
+                        <p class="entrycontent">i'm making worlds</p>
+                    </div>
+                    <div class="entry">
+                        <p class="date"">03-26-26</p>
+                        <p class="entrycontent">i'm making worlds</p>
+                    </div>
+                </div>
+            </section>
+
+            <p id="announcementtext1" class="text announcementtext">new stuff</p>
+            <p id="announcementtext2" class="text announcementtext">check this out</p>
+
+            <section id="announcements">
+                <button id="slideLeft" class="arrow"><</button>
+                <div id="carousel" class="poster">
+                    <a href="https://youtu.be/CR_JFgO11Qw" target="_blank" rel="noopener noreferrer"><img id="dit" class="slide" src="assets/carousel/dit.png"></a>
+                    <a href="https://distrokid.com/hyperfollow/crownorthrailwaystation/barren-desert-concrete-spires" target="_blank" rel="noopener noreferrer"><img id="bdcs" class="slide" src="assets/carousel/bdcs.jpg"></a>
+                </div>
+                <button id="slideRight" class="arrow">></button>
+            </section>
+
+            <section id="comments" class="simplecontainer">
+                <h2>comments</h2>
+                <div id="content">
+                    <script>
+                        chattable.initialize({
+                            stylesheet: "chattable.css"
+                        });
+                    </script>
+                    <iframe title="chat" src="https://iframe.chat/embed?chat=bluboebchatsitesupersecretchat" id="chattable"></iframe>
+
+                </div>
+            </section>
+
+            <section id="contact" class="simplecontainer">
+                <h2>contact me!</h2>
+                <div class="content">
+                    <form id="contactform" method="post" action="#">
+                        <label for="name">name:</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label for="email">email:</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="website">website:</label>
+                        <input type="url" id="website" name="website">
+
+                        <label for="message">message:</label>
+                        <textarea id="message" name="message" rows="2" cols="30" required></textarea>
+
+                        <input type="submit" value="submit">
+                    </form>
+                </div>
+            </section>
+
+            <section id="recommendations" class="simplecontainer">
+                <h2>other artists/groups to check out</h2>
+                <div class="content">
+                    <ul>
+                        <li><a href="https://friendcities.art/">friendcities</a></li>
+                        <p>artzine that i am a collaborator for :p</p>
+                        <li><a href="https://friendcities.art/">to be added later</a></li>
+                        <p>to be added later</p>
+                        <li><a href="https://friendcities.art/">to be added later</a></li>
+                        <p>to be added later</p>
+                        <li><a href="https://friendcities.art/">to be added later</a></li>
+                        <p>to be added later</p>
+                        <li><a href="https://friendcities.art/">to be added later</a></li>
+                        <p>to be added later</p>
+                        <li><a href="https://friendcities.art/">to be added later</a></li>
+                        <p>to be added later</p>
+                    </ul>
+                </div>
+            </section>
+        </main>
+
+        <input type="checkbox" id="musicToggle" hidden>
+        <label for="musicToggle" id="musicplayer-tab">music</label>
+
+        <section id="musicplayer">
+            <h2>music player</h2>
+            <div id="content"> 
+                <audio id="audio" preload="metadata" tabindex="none"></audio>
+                <select id="songSelect">
+                    <option value="">select a song</option>
+                </select>
+                <div id="time-container">
+                    <span id="currentTime">0:00</span>
+                    <div id="progress-bar"><div id="progress-fill"></div></div>
+                    <span id="totalTime">0:00</span>
+                </div>
+                <div id="player">
+                    <button id="play" type="button">play</button>
+                    <button id="pause" type="button">pause</button>
+                    <button id="stop" type="button">stop</button>
+                    <div id="volume-container">
+                        <label for="volume">volume</label>
+                        <input type="range" id="volume" min="0" max="100" value="50">
+                    </div>
+                </div>
+            </div>  
+        </section>
+
+        <footer>
+            <a href="#top">back to top</a>
+            <section id="footer-content" class="simplecontainer">
+                bluboeb, 2026 - forever. all rights reserved.<br>
+            </section>
+        </footer>
+    </body>
+</html>
