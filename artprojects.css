@@ -529,6 +529,10 @@ h2.simplecontainer {
 
 @media (max-width: 768px) {
 
+    body {
+        background-size: fill;
+    }
+
     nav {
         width: 90%
     }
@@ -597,7 +601,7 @@ h2.simplecontainer {
     }
 
     .announcements {
-        width: 100%;
+        width: 95%;
         justify-self: center;
         align-self: center;
         gap: 15px;
@@ -621,6 +625,7 @@ h2.simplecontainer {
         gap: 40px;
         width: 100%;
         margin-left: 0;
+        margin-right: 0;
     }
 
     .minimain div {
@@ -641,6 +646,8 @@ h2.simplecontainer {
         bottom: 0;
         top: 0;
         margin-bottom: 10px;
+        width: fit-content;
+        text-align: center;
     }
 
     .announcementtext {
@@ -661,6 +668,14 @@ h2.simplecontainer {
     #bdcsplayer {
         width: 100%;
         height: 600px;
+    }
+
+    #musicplayer-tab {
+        right: 40%;
+    }
+
+    #musicplayer {
+        left: 20%;
     }
 
 }
