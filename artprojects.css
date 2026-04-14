@@ -523,6 +523,10 @@ button.type.active {
 
 @media (max-width: 768px) {
 
+    nav {
+        width: 90%
+    }
+
     main {
         display: flex;
         flex-direction: column;
