@@ -552,6 +552,12 @@ h2.simplecontainer {
         gap: 10px;
     }
 
+
+    button {
+        box-shadow: 2px 2px #545454 inset, 2px 2px #000000;
+        background-color: #3B3E46;
+    }
+
     .nav-link {
         width: 80%;
         height: 40px;
