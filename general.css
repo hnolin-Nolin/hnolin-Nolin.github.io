@@ -1,0 +1,377 @@
+/* ======= general ======= */
+body {
+    font-family: MS Gothic, WinXP, Tahoma, sans-serif;
+    background-image: url('assets/backgrounds/woods.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    text-shadow: 3px 3px #0a0909;padding: 5px;
+    color:#fff;
+    display: flex;
+    flex-direction: column;
+
+    cursor: url("assets/cursor/Mystery\ arrow.cur"), auto;
+}
+
+h1 {
+    color: #FFF;
+    text-align: center;
+    text-shadow: 4px 4px #0a0909;
+    font-size: 1.4em;
+    margin: 8px auto;
+}
+
+h2 {
+    color: #FFF;
+    text-align: center;
+    text-shadow: 3px 3px #0a0909;
+    z-index: 1;
+    text-align: left;
+    margin: auto;
+    letter-spacing: 8px;
+    font-size: 16px;
+    font-weight: 100;
+    width: fit-content;
+}
+
+a {
+    text-decoration: none;
+    color: #fc5e53;
+}
+
+a:hover {
+    font-weight: bold;
+}
+
+.headeranchor {
+    width: fit-content;
+    margin: auto;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+textarea  {
+    font-family: MS Gothic, WinXP, Tahoma, sans-serif;
+}
+
+input[type="submit"], button {
+    background: #3b3e46;
+    color: #fff;
+    font-family: MS Gothic, WinXP, Tahoma, sans-serif;
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    background-color: #6381e2;
+    margin: 10px 0;
+    width: 100%;
+}
+
+input[type=date] {
+    -webkit-appearance: none;
+    margin: 10px 0;
+    font-family: MS Gothic, WinXP, Tahoma, sans-serif
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background: #6381e2;
+    height: 10px;
+    width: 10px;
+}
+
+p {
+    color: #FFF;
+    text-align: center;
+    text-shadow: 3px 3px #0a0909;
+}
+
+.three-column {
+  columns: 3;
+  -webkit-columns: 3;
+  -moz-columns: 3;
+}
+
+li {
+    padding: 5px;
+}
+
+li a:hover {
+    font-weight: bold;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #202127;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #41558b;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #2e468a;
+}
+
+/* ======= header/footer ======= */
+
+header {
+    width: fit-content;
+    text-align: center;
+    margin: 40px auto;
+}
+
+nav {
+    padding: 10px;
+    width: 444px;
+    margin: 40px auto;
+}
+
+
+.linklist {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+.linklist li {
+    align-self: center;
+    padding: 0;
+}
+
+.linklist li a {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.linklist li a::after {
+    content: attr(data-text);
+    font-weight: bold;
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.linklist li a:hover {
+    font-weight: bold;
+}
+
+.linklist li a.active-link {
+    font-weight: bold;
+}
+
+nav a {
+    text-shadow: 4px 4px #0a0909;
+    padding: 5px;
+    color:#fff;
+}
+
+footer {
+    text-align: center;
+    width: fit-content;
+    height: fit-content;
+    margin: 10px auto;   
+    color: #fff;
+}
+
+/* ======= containers ======= */
+
+.simplecontainer {
+    border: 1px solid #6381e2;
+    box-shadow: 2px 2px #0a0a0a;
+    padding: 8px;
+    background-color: rgb(20, 22, 31);
+    height: fit-content;
+}
+
+.simplecontainer p {
+    text-align: left;
+}
+
+.content {
+    border: 1px solid #555764;
+    padding: 0.5em;
+    background-color: #2d2c35;
+}
+
+.content-image {
+    width: 250px;
+    border: 1px dotted #fff;
+    align-self: center;
+    justify-self: center;
+}
+
+.overlap:hover {
+    position: relative;
+    z-index: 9;
+}
+
+/* ======= music player ======= */
+
+#musicplayer-tab {
+    position: fixed;
+    right: 135px;
+    bottom: 0;
+    z-index: 100;
+    cursor: pointer;
+    padding: 10px 14px;
+    border-radius: 8px 8px 0 0;
+    background: rgb(20, 22, 31);
+    border: 1px solid #6381e2;
+    color: #fff;
+    font-weight: 700;
+    transition: bottom 0.3s ease;
+}
+
+#musicToggle:checked ~ #musicplayer {
+    max-height: 120px;
+    pointer-events: auto;
+}
+
+#musicToggle:checked ~ #musicplayer-tab {
+    bottom: 120px;
+}
+
+#musicplayer {
+    position: fixed;
+    right: 16px;
+    bottom: 0;
+    width: 325px;
+    max-height: 0;
+    transition: max-height 0.3s ease;
+    background: rgba(20, 22, 31);
+    border: 1px solid #6381e2;
+    box-shadow: 2px 2px #0a0a0a;
+    z-index: 100;
+    pointer-events: none;
+}
+
+#musicplayer #content {
+    padding: 8px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+#songSelect {
+    width: 100%;
+    margin-bottom: 8px;
+    background: #3b3e46;
+    color: #fff;
+    border: 1px solid #6381e2;
+    padding: 4px;
+    font-family: MS Gothic, WinXP, Tahoma, sans-serif;
+}
+
+#progress-bar {
+    flex: 1;
+    margin: 0 8px;
+    height: 8px;
+    background: #3b3e46;
+    border: 1px solid #6381e2;
+    position: relative;
+    cursor: pointer;
+}
+
+#progress-fill {
+    height: 100%;
+    background: #6381e2;
+    width: 0%;
+    transition: width 0.1s ease;
+}
+
+#time-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 8px 0;
+}
+
+#currentTime, #totalTime {
+    color: #fff;
+    font-size: 0.8em;
+    white-space: nowrap;
+}
+
+#timeDisplay {
+    text-align: center;
+    color: #fff;
+    font-size: 0.8em;
+    margin-top: 4px;
+}
+
+#volume {
+    width: fit-content;
+    margin: 8px 0;
+    background: #3b3e46;
+    border: 1px solid #6381e2;
+}
+
+#player {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    height: 30px;
+}
+
+#volume-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#volume-container label{
+    color: white;
+    font-size: 12px;
+}
+
+/* ======= announcement ======= */
+
+.arrow {
+    font-size: 1.2em;
+    color: #fff;
+    user-select: none;  
+    background: #3b3e46;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    margin: auto;
+}
+
+.arrow:focus {
+    outline: none;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+}
+
+.slide.active {
+    opacity: 1;
+    pointer-events: auto;
+}

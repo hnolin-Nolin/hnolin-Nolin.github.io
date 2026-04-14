@@ -1,0 +1,520 @@
+/* ======= general ======= */
+
+main {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 500px 1325px;
+    grid-template-rows: 1000px;
+    column-gap: 3px;
+    row-gap: 10px;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+/* ======= openphoto ======= */
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+#overlay.visible {
+    display: flex;
+}
+
+#overlay-img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    cursor: zoom-in;
+    transition: transform 0.2s ease;
+}
+
+.photoopen {
+    cursor: pointer;
+}
+
+/* ======= optionsbar ======= */
+
+#optionsbar {
+    grid-column: 1;
+    grid-row: 1 / 4;
+    width: 90%;
+    align-content: center;
+    justify-content: center;
+    justify-self: center;
+    align-self: center;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#optionsbar p {
+    margin: 0;
+    margin: 10px 0;
+}
+
+button.project.active {
+    border-style: inset;
+}
+
+button.type.active {
+    border-style: inset;
+}
+
+#filter {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    width: 100%;
+    align-self: center;
+    justify-self: center;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#projectoptions {
+    margin-bottom: 10px;
+}
+
+#generalprojects {
+    width: 100%;
+    align-self: center;
+    justify-self: center;
+    margin: 0;
+}
+
+#currentprojects {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#oldprojects {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.pushright {
+    margin-left: 40px;
+}
+
+.topdown {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+#art {
+    width: 100%;
+    height: 900px;
+    align-self: center;
+    margin: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+/* ======= project template ======= */
+
+.projectdisplay {
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    display: none;
+}
+
+/* only show the active one */
+.projectdisplay.visible {
+    display: flex;
+}
+
+.projectdisplay p {
+    margin: 8px 0;
+}
+
+.miniheader {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 80%;
+    align-self: center;
+    justify-self: center;
+}
+
+.hero {
+    height: 400px;
+    width: fit-content;
+    align-self: center;
+    border: 1px dotted #fff;
+}
+
+.minimain {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    gap: 20px;
+
+    height: 500px;
+    width: fit-content;
+
+    margin: 50px;
+
+    /*position: relative;
+    left: 35px;*/
+}
+
+.minimain .content {
+    width: calc(100% - 16px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    gap: 10px;
+    text-align: left;
+}
+
+.minimain .content p {
+    margin: 4px 0;
+}
+
+.content li, .content ul {
+    margin: 0;
+    justify-items: left;
+    align-items: start;
+    text-align: left;
+}
+
+.left {
+    justify-items: left;
+    align-items: start;
+}
+
+.center {
+    align-self: center;
+}
+
+/* ======= display css ======= */
+
+/* hide all project views by default */
+
+.nav-link {
+    cursor: pointer;
+    width: fit-content;
+}
+
+.nav-link.active {
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    font-weight: bold;
+}
+
+
+/* ======= description ======= */
+
+.description {
+    grid-column: 1;
+    grid-row: 1;
+    
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+
+    width: 95%;
+    min-height: 150%;
+    max-height: 190%
+}
+
+.description-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    gap: 10px;
+
+    width: 100%;
+    height: 110%;
+    max-height: 190%
+    
+}
+
+.description h2 {
+    position: relative;
+    left: 20px;
+    bottom: 5px;
+}
+.description .content {
+    margin: 0;
+}
+
+.description .left {
+    justify-items: left;
+    align-items: start;
+}
+
+.center {
+    align-self: center;
+}
+
+/* ======= info ======= */
+
+.info {
+    grid-column: 2;
+    grid-row: 1;
+
+    position: relative;
+    left: 18%;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+
+    width: 80%;
+    height: 80%;
+}
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    gap: 8px;
+    width: 100%;
+    height: 100%;
+}
+
+.info-container .content {
+    height: fit-content;
+    justify-items: left;
+    align-items: start;
+}
+
+.info h2 {
+    position: relative;
+    left: 20px;
+    bottom: 5px;
+}
+
+
+/* ======= why ======= */
+
+.why {
+    grid-column: 2;
+    grid-row: 2;
+
+    position: relative;
+    right: 12%;
+    z-index: 1;
+
+    width: 110%;
+    height: 145%;
+}
+
+.why-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    gap: 8px;
+    width: 100%;
+    height: 100%;
+}
+
+.why-container .content {
+    height: fit-content;
+    justify-items: left;
+    align-items: start;
+}
+
+.why h2 {
+    position: relative;
+    left: 120px;
+    bottom: 5px;
+}
+
+/* ======= links ======= */
+
+.links {
+    grid-column: 1;
+    grid-row: 2;
+
+    position: relative;
+    top: 85%;
+    z-index: 1;
+
+    width: 65%;
+    height: 120%;
+}
+
+.links-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    gap: 8px;
+    width: 100%;
+    height: 100%;
+}
+
+.links-container .content {
+    /*width: calc(100% - 15px);
+    height: calc(100% - 15px);*/
+}
+
+.links-container .content {
+    height: fit-content;
+}
+
+.links h2 {
+    position: relative;
+    bottom: 5px;
+    width: 120%
+}
+
+/* ======= intro carousel ======= */
+
+#intro {
+    grid-column: 2;
+    grid-row: 1;
+    flex-direction: column;
+    gap: 0;
+}
+
+.announcements {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 0 auto;
+    padding: 8px;
+    grid-column: 2;
+    grid-row: 1;
+    height: 400px;
+    width: 1000px;
+}
+
+.carousel {
+    margin: 0 auto;
+    overflow: hidden;
+    background-color:#000000;
+    background-image: url("photogallery/compressed/DSC02089-compressed.jpg");
+    background-size: cover;
+    
+
+    /* box-shadow: 1px 1px #fff; */
+    position: relative;
+    height: 400px;
+    width: 1000px;
+    align-self: center;
+    border: 1px dotted #fff;
+    
+}
+
+.announcementtext {
+    z-index: 1;
+    text-align: left;
+    margin: 0;
+    letter-spacing: 5px;
+    height: fit-content;
+}
+
+#announcementtext1 {
+    grid-row: 1;
+    grid-column: 2;
+    position: relative;
+    left: 395px;
+    bottom: 150px;
+    width: fit-content;
+}
+
+#announcementtext2 {
+    grid-row: 1;
+    grid-column: 2;
+    position: relative;
+    right: 550px;
+    bottom: 450px;
+    width: fit-content;
+}
+
+.slide {
+    object-fit: contain;
+}
+
+/* ======= specific page settings ======= */
+
+#fctable{ 
+    padding: 10px;
+    border: 1px dotted #fff;
+    background-color: #101011;
+}
+
+#fctable th, #fctable td {
+    border: 1px solid #6381e2;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+}
+
+#ditcarousel {
+    background-image: url(assets/images/carouselbackground.png);
+}
+
+#bdcsheader {
+    display: flex;
+    height: 400px;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+}
+
+#bdcshero {
+    width: auto;
+    height: 100%;
+    border: 1px dotted #fff;
+}
+
+#bdcsplayer {
+    border: 0;
+    width: 50%;
+}
+
+#bdcsinfo {
+    top: 100%;
+}
+
+#bdcsdescription {
+    height: fit-content;
+}
+
+#bdcswhy {
+    height: fit-content;
+}
+
+#oldsite {
+    width: 252;
+    height: auto;
+}

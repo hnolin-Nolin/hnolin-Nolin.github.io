@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>post generator</title>
+  <link rel="stylesheet" href="general.css">
+  <link rel="stylesheet" href="post-generator.css">
+</head>
+<body>
+
+  <div class="wrap">
+    <div class="field">
+      <label for="f-title">title</label>
+      <input type="text" id="f-title" placeholder="my post title">
+    </div>
+
+    <div class="field">
+      <label for="f-date">date</label>
+      <input type="date" id="f-date">
+    </div>
+
+    <div class="field">
+      <label>tags</label>
+      <div id="tag-list"></div>
+      <button id="add-tag" type="button">+ add tag</button>
+    </div>
+
+    <div class="field">
+      <label for="f-body">body</label>
+      <textarea id="f-body" placeholder="write your post here..."></textarea>
+    </div>
+
+    <hr class="divider">
+
+    <div class="field">
+      <label for="f-num">post number</label>
+      <input type="number" id="f-num" min="1" value="1">
+      <p class="filename-preview" id="filename-preview">file will be saved as post1.xml</p>
+    </div>
+
+    <div id="output-wrap">
+      <label>generated xml</label>
+      <textarea id="xml-out" readonly></textarea>
+      <div class="actions">
+        <button id="copy-btn" type="button">copy to clipboard</button>
+        <button id="download-btn" type="button">download</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="post-generator.js"></script>
+</body>
+</html>

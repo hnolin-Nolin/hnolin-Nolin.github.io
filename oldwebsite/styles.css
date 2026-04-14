@@ -1,0 +1,177 @@
+* {
+    box-sizing: border-box;
+    font-family: MS Gothic, WinXP, Tahoma, sans-serif;
+}
+
+@font-face {
+   font-family: "WinXP";
+   src: url('https://xobyte.org/files/fonts/win.woff');
+}
+
+body {
+ margin: 0;   
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+p {
+    margin:5px;
+}
+
+header{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+#title {
+    color:antiquewhite;
+    text-decoration: none;
+}
+
+main {
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: stretch;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+html {
+    background-image:url(images/jack.jpg);
+    color: antiquewhite;
+}
+
+section {
+    margin-bottom: 20px; 
+}
+
+.left, .right {
+    width: 25%;
+}
+
+.middle {
+    width: 50%;
+    height: 100%;
+
+    margin-left: auto;
+    margin-right: auto;    
+}
+
+.center {
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 50%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;    
+}
+
+.comment {
+    background-color: antiquewhite;
+    color: black;
+}
+
+.window{
+    padding: 4px;
+    border: groove;
+    border-color: #dd4f4f;
+    border-width: 2px;
+    text-align: center;
+    margin: auto;
+    background-image:url(images/filbo.png);
+    background-size: 400px 200px;
+    filter: drop-shadow(1px 1px 1px #333);
+}
+
+.title{
+    align-content: center;
+    border: groove;
+    border-color: #dd4f4f;
+    border-width: 2px;
+    text-align: center;
+    height: fit-content;
+    width: 30%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-image:url(images/filbo.png);
+    background-size: 400px 200px;  
+}
+
+.content{
+    border:black 1px solid;
+    text-align: left;
+    background-color: aliceblue;
+    color: black;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+@media (max-width: 960px){
+    .left, .right, .middle {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;     
+    }
+    main {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; 
+        gap: 0;
+    }
+    .title {
+        width: 50%;
+    }
+    .center {
+        width: 75%
+    }
+}
+
+.player {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    gap: 10px;
+    width: 95%;
+}
+
+#progress-container {
+    flex: 1;
+    height: 8px;
+    background: #ccc;
+    cursor: pointer;
+    position: relative;
+    border-radius: 4px;
+}
+
+#progress-bar {
+    height: 100%;
+    width: 0%;
+    background: #4c62af;
+    border-radius: 4px;
+}
+
+#nav{
+    text-align: center;
+}
+
+#chattable {
+    width: 100%;
+    height: 250px;
+}
+
+/*
+#musicplayer{
+    text-align: center;
+}
+*/

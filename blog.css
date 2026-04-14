@@ -1,0 +1,189 @@
+/* ======= general ======= */
+
+main {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 400px 850px 400px;
+    grid-template-rows: 900px;
+    column-gap: 50px;
+    row-gap: 10px;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+#hidden {
+    position: fixed;
+    left: 20px;
+    top: 0;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+
+/* ======= sorting ======= */
+
+#filtergroup {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    left: 60px;
+    bottom: 350px;
+    gap: 10px;
+    width: 22%;
+}
+
+#filtertitle {  
+    z-index: 10;
+}
+
+#options {
+    gap: 10px;
+    width: 100%;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#searchbar input {
+    width: 96%;
+    padding: 5px;
+    border: 1px solid #6381e2;
+}
+
+#filter {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    justify-content: space-around;
+}
+
+#tags {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#filter input {
+    width: 25%;
+    padding: 5px;
+    border: 1px solid #6381e2;
+    height: fit-content;;
+}
+
+#filter label {
+    font-size: 14px;
+    align-self: center;
+}
+
+#tags label {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#tagOptions {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: fit-content;
+    gap: 5px;
+}
+
+button.tag.active {
+    border-style: inset;
+}
+
+
+/* ======= blog ======= */
+
+#blogcontainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+    grid-column: 2;
+    grid-row: 1;
+    height: 850px;
+}
+
+#blogposts {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 825px;
+    width: 97%;
+    margin: auto;
+    align-self: center;
+    background-color: #252527;
+}
+
+article {
+    border: 1px solid #6381e2;
+    box-shadow: 2px 2px #0a0a0a;
+    padding: 5px 5px;
+    background-color: #263050;
+    margin-bottom: 15px;
+}
+
+.post-body {
+    display: flex;
+    flex-direction: column;
+    border: #bdbdbd 1px dotted;
+    background-color: rgb(30, 30, 71);
+    padding: 10px;
+}
+
+.post-body img {
+    width: 65%;
+    align-self: center;
+    height: auto;
+    border: #ffffff 1px dotted;
+    margin: 10px;
+    margin-top: 0;
+}
+
+.post-body p {
+    text-align: left;
+    margin-top: 0;
+}
+
+.post-meta {
+    display: none;
+}
+
+.small {
+    font-size: 12px;
+    width: fit-content;
+}
+
+.left {
+    width: fit-content;
+}
+
+.post-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header-date {
+    float: left;
+    width: fit-content;
+}
+
+.post-header p {
+    height: 16px;
+    margin: 5px;
+}
+
+mark {
+    text-shadow: none;
+    font-weight: 500;
+}
+
+#no-posts {
+    grid-column: 1 / span 3;
+    grid-row: 1;
+    z-index: 1;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 250px;
+}

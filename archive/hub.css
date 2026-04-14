@@ -1,0 +1,249 @@
+/* ======= general ======= */
+
+main {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 400px 900px 400px;
+    grid-template-rows: 500px 300px 100px;
+    column-gap: 3px;
+    row-gap: 10px;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+footer {
+    grid-column: 1 / span 3;
+    grid-row: 3;
+}
+
+/* ======= microblog ======= */
+.entry {
+    font-size: 1em;
+    border: 1px solid #6381e2;
+    box-shadow: 2px 2px #0a0a0a;
+    padding: 5px 5px;
+    margin: 0 0 0.5em;
+    background-color: #646a7e;
+}
+
+.date {
+    color: #ffffff;
+    text-shadow: 3px 3px #0a0909;
+    margin: 5px 5px 5px 5px;
+    text-align: left;
+}
+
+.entrycontent {
+    font-size: 1em;
+    border: 1px solid #333;
+    padding: 5px 5px;
+    background-color: #ffffff;
+    margin: 0;
+    color: #000;
+    text-shadow: none;
+    text-align: left;;
+}
+
+#microblog {
+    width: 275px;
+    margin: 0 auto;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    margin-top: 100px;
+}
+
+#microblog .content {
+    background-color: #36363f;
+}
+
+#posts {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 300px;
+}
+
+#microblogtitle {
+    position: relative;
+    grid-column: 1;
+    grid-row: 1;
+    right: 100px;
+    bottom: 162px;
+}
+
+/* ======= announcement ======= */
+
+#dit {
+    object-fit: cover;
+    object-position: -75px;
+}
+
+#announcements {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    margin-top: 275px;
+    padding: 8px;
+    grid-column: 2;
+    grid-row: 1;
+}
+
+#carousel {
+    width: 850px;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color:#040405;
+    height: 750px;
+    border: 1px dotted #fff;
+    /* box-shadow: 1px 1px #fff; */
+    position: relative;
+}
+
+.announcementtext {
+    grid-column: 2;
+    grid-row: 1;
+    z-index: 1;
+    text-align: left;
+    margin: auto;
+    letter-spacing: 5px;
+}
+
+#announcementtext1 {
+    position: relative;
+    right: 250px;
+    bottom: 252px;
+}
+
+#announcementtext2 {
+    position: relative;
+    right: 375px;
+    bottom: 200px;
+}
+/* ======= comments ======= */
+#comments {
+    position: relative;
+    bottom: 80px;
+    grid-column: 3;
+    grid-row: 2;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 8px;
+    margin-left: 100px;
+    transform: rotate(-3deg);
+}
+
+#chattable {
+    width: fit-content;
+    height: 300px;
+    margin: 0 auto;
+    padding: 8px;
+}
+
+#commentstitle {
+    position: relative;
+    bottom: 250px;
+    grid-column: 3;
+    grid-row: 2; 
+    z-index: 1;
+}
+
+/* ======= contact ======= */
+#contact {
+    grid-column: 1;
+    grid-row: 3;
+    /*transform: rotate(-3deg);*/
+    width: fit-content;
+    margin: 0 auto;
+}
+
+#contactform {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.35em 0;
+    align-items: start;
+    width: fit-content;
+    margin: 0 auto;
+    color: #fff;
+}
+
+#contactform * {
+    margin: 0.1em 0;
+}
+
+#contactform textarea {
+    min-height: 100px;
+    max-height: 500px;
+    min-width: fit-content;
+    max-width: fit-content;
+}
+
+#contactform input[type="text"],
+#contactform input[type="email"],
+#contactform textarea {
+    background-color: #ffffff;
+}
+
+#contactform input[type="submit"] {
+    justify-self: center;
+    margin-top: 0.5em;
+}
+
+#contacttitle {
+    position: relative;
+    bottom: 270px;
+    right: 100px;
+    grid-column: 1;
+    grid-row: 3; 
+    z-index: 1;
+}
+
+/* ======= recommendations ======= */
+#recommendations {
+    /*transform: rotate(10deg);*/
+    width: 450px;
+    grid-column: 2;
+    grid-row: 3;
+    padding: 8px;
+    position: relative;
+    left: 460px;
+    top: 120px;
+}
+
+#recommendations li, #recommendations ul {
+    list-style-type: none;
+    margin: 2px;
+    padding-left: 0;
+    text-align: center;
+}
+
+#recommendations p {
+    font-size: 12px;
+    margin: 0;
+    margin-bottom: 8px;;
+}
+
+#recommendations .content {
+    background-color: #fff;
+}
+
+#recommendations a {
+    font-weight: 700;
+}
+
+#footer-content {
+    padding: 10px;
+    margin: 15px;
+}
+
+#recommendationstitle {
+    position: relative;
+    bottom: 150px;
+    left: 360px;
+    grid-column: 2;
+    grid-row: 3; 
+    z-index: 1;
+}

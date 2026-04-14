@@ -1,0 +1,436 @@
+/* ======= general ======= */
+
+main {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 500px 625px 600px;
+    grid-template-rows: 400px 350px 450px;
+    column-gap: 3px;
+    row-gap: 10px;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.aboutmecontent {
+    margin-bottom: 10px;
+}
+
+/* ======= me ======= */
+
+#mebox {
+    grid-column: 1;
+    grid-row: 1;
+    width: 80%;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+}
+
+#me {
+    border: 1px dotted #ffffff;
+    box-shadow: 2px 2px #0a0a0a;
+    width: 275px;
+    height: 275px;
+}
+
+#metitle {
+    position: relative;
+    bottom: 215px;
+    right: -100px;
+    grid-column: 1;
+    grid-row: 1; 
+    z-index: 10;
+}
+
+#socialmedia {
+    margin-bottom: 10px;
+}
+
+#socialmedia li {
+    margin: auto 5px;
+}
+
+/* ======= favorite media ======= */
+
+#favoritebox {
+    position: relative;
+    top: 25px;
+
+    grid-column: 1;
+    grid-row: 2;
+    width: 80%;
+    padding: 15px;
+    align-items: center;
+    place-self: center;
+}
+
+#favoritetitle {
+    position: relative;
+    bottom: 165px;
+    right: 150px;
+    grid-column: 1;
+    grid-row: 2; 
+    z-index: 10;
+}
+
+#favoritebox p {
+    text-align: left;
+    margin: 8px 0;
+}
+
+/* ======= why make this ======= */
+#whybox {
+    position: relative;
+    bottom: 20px;
+    grid-column: 3;
+    grid-row: 1;
+    width: 80%;
+    height: 300px;
+    padding: 15px;
+    place-self: center;
+}
+
+#whytitle {
+    position: relative;
+    bottom: 200px;
+    right: 100px;
+    grid-column: 3;
+    grid-row: 1; 
+    z-index: 10;
+}
+
+#whybox p {
+    text-align: left;
+    margin: 8px 0;
+}
+
+/* ======= about me ======= */
+#aboutmebox {
+    position: relative;
+    left: 100px;
+    bottom: 120px;
+    grid-column: 2;
+    grid-row: 2;
+    width: 110%;
+    height: 555px;
+    padding: 15px;
+    place-self: center;
+    z-index: 2;
+    /*overflow-y: scroll;
+    overflow-x: hidden;*/
+}
+
+#aboutmetitle {
+    position: relative;
+    bottom: 430px;
+    right: 100px;
+    grid-column: 2;
+    grid-row: 2;
+    z-index: 10;
+}
+
+#aboutmebox p {
+    text-align: left;
+    margin: 8px 0;
+}
+
+#friendbox {
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 33% 33% 34%;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+#friendbox img {
+    height: 80px;
+    width: 80px;
+    border: #ffffff 1px dotted;
+    box-shadow: 3px 3px #000000;
+    margin: 5px;
+}
+
+#friendbox p {
+    text-align: left;
+    margin: auto 15px;
+}
+
+.friendportrait {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1px;
+}
+
+#lindsey {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+#kenzie {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+#parker {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.friendquote {
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+    padding: 5px;
+    background-color: #1d1752;
+    box-shadow: 2px 2px #000000 inset;
+}
+
+
+
+/* ======= why make art ======= */
+#whyartbox {
+    position: relative;
+    grid-column: 3;
+    grid-row: 2;
+    right: 40px;
+    top: 80px;
+    width: 100%;
+    height: fit-content;
+    padding: 15px;
+    place-self: center;
+    z-index: 3;
+}
+
+#whyarttitle {
+    position: relative;
+    bottom: 100px;
+    left: -275px;
+    grid-column: 3;
+    grid-row: 2; 
+    z-index: 10;
+}
+
+#whyartbox p {
+    text-align: left;
+    margin: 8px 0;
+}
+
+/* ======= projects ======= */
+
+#projectsbox {
+    display: flex;
+    flex-direction: row;
+    top: 30px;
+    gap: 40px;
+    align-items: center;
+    justify-self: center;
+    position: relative;
+    grid-column: 1;
+    grid-row: 3;
+    width: fit-content;
+    padding: 15px;
+    place-self: center;
+    z-index: 3;
+}
+
+#projectstitle {
+    position: relative;
+    bottom: 130px;
+    align-self: center;
+    grid-column: 1;
+    grid-row: 3;
+    z-index: 10;
+}
+
+#projectsbox img {
+    height: 200px;
+    border: #ffffff 1px dotted;
+}
+
+#dit-image:hover {
+    cursor: pointer;
+}
+
+#ghsl-image:hover {
+    cursor: pointer;
+}
+
+/* ======= project dialog ======= */
+
+.dialog-content {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 35%;
+    height: fit-content;
+    padding: 10px;
+}
+
+.dialog-content h2 {
+    text-align: center;
+}
+
+.dialog-content img {
+    margin: 15px 10px;
+    max-height: 360px;
+    align-self: center;
+    height: auto;
+}
+
+.dialog-content p {
+    text-align: center;
+    margin-top: 0px;
+}
+
+/* Dark backdrop behind dialog */
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.8)
+    /*background-image: url('assets/images/filbo.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5;*/
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+/* ======= microblog ======= */
+.entry {
+    font-size: 1em;
+    border: 1px solid #6381e2;
+    box-shadow: 2px 2px #0a0a0a;
+    padding: 5px 5px;
+    margin: 0 0 0.5em;
+    background-color: #646a7e;
+}
+
+.date {
+    color: #ffffff;
+    text-shadow: 3px 3px #0a0909;
+    margin: 5px 5px 5px 5px;
+    text-align: left;
+}
+
+.entrycontent {
+    font-size: 1em;
+    border: 1px solid #333;
+    padding: 5px 5px;
+    background-color: #ffffff;
+    margin: 0;
+    color: #000;
+    text-shadow: none;
+    text-align: left;;
+}
+
+#microblog {
+    position: relative;
+    bottom: 300px;
+    right: -20px;
+    width: 275px;
+    margin: 0 auto;
+    grid-column: 3;
+    grid-row: 2;
+    margin-top: 100px;
+    z-index: 4;
+}
+
+#microblog .content {
+    background-color: #36363f;
+}
+
+#posts {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 235px;
+}
+
+#microblogtitle {
+    position: relative;
+    grid-column: 3;
+    grid-row: 2;
+    right: 0px;
+    bottom: 385px;
+    z-index: 4;
+}
+
+/* ======= contact ======= */
+#contact {
+    position: relative;
+    top: 50px;
+    grid-column: 2;
+    grid-row: 3;
+    /*transform: rotate(-3deg);*/
+    width: fit-content;
+    margin: 0 auto;
+    height: fit-content;
+}
+
+#contactform {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.35em 0;
+    align-items: start;
+    width: 300px;
+    margin: 0 auto;
+    color: #fff;
+}
+
+#contactform * {
+    margin: 0.1em 0;
+}
+
+#contactform textarea {
+    min-height: 50px;
+    max-height: 148px;
+    min-width: 290px;
+    max-width: 290px;
+}
+
+#contactform input[type="text"],
+#contactform input[type="email"],
+#contactform input[type="url"],
+#contactform textarea {
+    background-color: #ffffff;
+    width: 290px;
+    align-self: left;
+}
+
+#contactform input[type="submit"] {
+    align-self: center;
+    margin-top: 0.5em;
+}
+
+#contacttitle {
+    position: relative;
+    bottom: 190px;
+    right: 120px;
+    grid-column: 2;
+    grid-row: 3; 
+    z-index: 1;
+}
+
+/* ======= graphic ======= */
+
+#anthony-img {
+    position: relative;
+    right: 50px;
+    grid-column: 3;
+    grid-row: 3;
+    place-self: center;
+    width: 600px;
+    height: 300px;
+}
+
+

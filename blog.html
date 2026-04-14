@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">  
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta name="description" content="this page is a blog for harrison nolin">
+        <title>dreamworlds: blog</title>
+        <link rel="stylesheet" href="general.css">
+        <link rel="stylesheet" href="blog.css">
+        <link rel="icon" type="image/png" href="assets/favicon.png">
+        <script src="https://iframe.chat/scripts/main.min.js"></script>
+        <script src="musicplayer.js"></script>
+        <script src="backgrounds.js"></script>
+        <script src="blog.js" defer></script>
+    </head>
+    <body>
+        <a class="headeranchor" href="index.html">
+            <header class="simplecontainer">
+            
+                <h1>dreamworlds</h1>
+            </header>
+        </a>
+
+        <p class="text">
+            hi<br><br>
+            i'm making worlds
+        </p>
+
+        <nav class="simplecontainer">
+            <ul class="linklist">
+                <li><a href="index.html" data-text="art projects">art projects</a></li>
+                <li>|</li>
+                <li><a href="aboutme.html" data-text="about me">about me</a></li>
+                <li>|</li>
+                <li><a href="blog.html" data-text="blog"><span class="bold">blog</span></a></li>
+                <li>|</li>
+                <li><a href="photography.html" data-text="photography">photography</a></li>
+            </ul>
+        </nav>
+
+        <a id="hidden" href="post-generator.html">o</a>
+
+        <main>
+            <div id="filtergroup">
+                <h2 id="filtertitle">search and filter</h2>
+                <section id="options">
+                
+                    <section id="searchbar" class="simplecontainer">
+                        <input type="text" id="searchInput" placeholder="search">
+                    </section>
+                    
+                    <section id="filter" class="simplecontainer">
+                        <label for="startDate">start date:</label>
+                        <input type="date" id="startDate" placeholder="start date">
+                        <label for="endDate">end date:</label>
+                        <input type="date" id="endDate" placeholder="end date">
+                    
+                    </section>
+                    
+                    <section id="tags" class="simplecontainer">
+                        <label>tags</label>
+                        <div id="tagOptions">
+                            <!-- tag buttons appear here -->
+                        </div>
+                
+                    </section>
+                </section>
+            </div>
+
+            <section id="blogcontainer" class="simplecontainer">
+                <div id="blogposts" class="content">
+                    <!-- blog posts appear here-->   
+                </div>
+            </section>
+        </main>
+ 
+        <input type="checkbox" id="musicToggle" hidden>
+        <label for="musicToggle" id="musicplayer-tab">music</label>
+
+        <section id="musicplayer">
+            <p></p>
+            <div id="content"> 
+                <audio id="audio" preload="metadata" tabindex="none"></audio>
+                <select id="songSelect">
+                    <option value="">select a song</option>
+                </select>
+                <div id="time-container">
+                    <span id="currentTime">0:00</span>
+                    <div id="progress-bar"><div id="progress-fill"></div></div>
+                    <span id="totalTime">0:00</span>
+                </div>
+                <div id="player">
+                    <button id="play" type="button">play</button>
+                    <button id="pause" type="button">pause</button>
+                    <button id="stop" type="button">stop</button>
+                    <div id="volume-container">
+                        <label for="volume">volume</label>
+                        <input type="range" id="volume" min="0" max="100" value="50">
+                    </div>
+                </div>
+            </div>  
+        </section>
+
+        <footer>
+            <section id="footer-content" class="simplecontainer">
+                harrison nolin, 2026 - forever. all rights reserved.<br>
+            </section>
+        </footer>
+    </body>
+</html>

@@ -3,19 +3,25 @@
     <head>
         <meta charset="utf-8">  
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <title>bluboeb's dreamworlds</title>
-        <link rel="stylesheet" href="hub.css">
+        <meta name="description" content="welcome to dreamworlds, this page shows off the art projects of harrison nolin">
+        <title>welcome to dreamworlds</title>
+        <link rel="stylesheet" href="general.css">
+        <link rel="stylesheet" href="artprojects.css">
+        <link rel="icon" type="image/png" href="assets/icons/ghslbrighticon.png">
         <script src="https://iframe.chat/scripts/main.min.js"></script>
-        <script src="backgrounds.js"></script>
         <script src="musicplayer.js"></script>
+        <script src="backgrounds.js"></script>
+        <script src="artprojects.js"></script>
         <script src="carousel.js"></script>
+        <script src="openphoto.js"></script>
     </head>
     <body>
-        <header class="simplecontainer">
-            <a href="index.html">
-                <h1>bluboeb's dreamworlds</h1>
-            </a>
-        </header>
+        <a class="headeranchor" href="index.html">
+            <header class="simplecontainer">
+            
+                <h1>dreamworlds</h1>
+            </header>
+        </a>
 
         <p class="text">
             hi<br><br>
@@ -23,119 +29,1083 @@
         </p>
 
         <nav class="simplecontainer">
-            <ul>
-                <li><a href="index.html">hub</a></li>
+            <ul class="linklist">
+                <li><a href="index.html" data-text="art projects"><span class="bold">art projects</span></a></li>
                 <li>|</li>
-                <li><a href="aboutme.html">about me</a></li>
+                <li><a href="aboutme.html" data-text="about me">about me</a></li>
                 <li>|</li>
-                <li><a href="blog.html">blog</a></li>
+                <li><a href="blog.html" data-text="blog">blog</a></li>
                 <li>|</li>
-                <li><a href="artprojects.html">art projects</a></li>
-                <li>|</li>
-                <li><a href="photography.html">photography</a></li>
+                <li><a href="photography.html" data-text="photography">photography</a></li>
             </ul>
         </nav>
 
         <main>
+            <section id="optionsbar">
+                <section id="filter" class="simplecontainer">
+                    <p>project for:</p>
+                    <div id="projectoptions" class="content buttons">
+                        <button class="project" data-tag="allprojects">all</button>
+                        <button class="project" data-tag="ghsl">greyhillstarslie</button>
+                        <button class="project" data-tag="b43ey">b43ey</button>
+                        <button class="project" data-tag="parkercollab">parker collab</button>
+                        <button class="project" data-tag="friendcities">friendcities</button>
+                        <button class="project" data-tag="cnrs">crow north railway station</button>
+                        <button class="project" data-tag="otherproject">other</button>
+                    </div>
+                    <p>type:</p>
+                    <div id="typeoptions" class="content buttons">
+                        <button class="type" data-tag="alltypes">all</button>
+                        <button class="type" data-tag="film">film</button>
+                        <button class="type" data-tag="music">music</button>
+                        <button class="type" data-tag="collaboration">collaboration</button>
+                        <button class="type" data-tag="ep">ep</button>
+                        <button class="type" data-tag="album">album</button>
+                        <button class="type" data-tag="visual">visual</button> 
+                        <button class="type" data-tag="writing">writing</button>
+                        <button class="type" data-tag="coding">coding</button>
+                        <button class="type" data-tag="othertype">other</button>
+                    </div>
+                </section>
 
-            <section id="microblog" class="simplecontainer">
-                <h2>microblog</h2>
-                <div id="posts" class="content">
-                    <div class="entry">
-                        <p class="date"">03-26-26</p>
-                        <p class="entrycontent">today i went to the store and found out something really cool :)</p>
+                <nav id="generalprojects" class="simplecontainer">
+                    <p>current projects</p>
+                    <div id="currentprojects" class="content topdown">
+                        <a class="nav-link" data-target="ghsl">greyhillstarslie</a>
+                        <a class="nav-link" data-target="b43ey">b43ey</a>
+                        <a class="nav-link" data-target="parkercollab"">parker collab</a>
+                        <a class="nav-link" data-target="friendcities"">friendcities</a>
                     </div>
-                    <div class="entry">
-                        <p class="date"">03-26-26</p>
-                        <p class="entrycontent">i'm making worlds</p>
+                </nav>
+
+                <nav id="art" class="simplecontainer">
+                    <p>2026</p>
+                    <div id="2026" class="content topdown">
+                        <!-- not released yet
+                        <a class="nav-link" data-target="2026usfsf" data-project="parkercollab" data-type="film,collaboration">april: untitled science fiction short film</a>
+                        -->
+                        <a class="nav-link" data-target="2026website" data-project="otherproject" data-type="coding,visual,writing">april: website</a>
                     </div>
-                    <div class="entry">
-                        <p class="date"">03-26-26</p>
-                        <p class="entrycontent">i'm making worlds</p>
+
+                    <p>2025</p>
+                    <div id="2025" class="content topdown">
+                        <a class="nav-link" data-target="2025fc10" data-project="friendcities" data-type="visual,writing">december: friendcities volume 10 submission</a>
+                        <a class="nav-link" data-target="2025dit" data-project="parkercollab,dit" data-type="film,collaboration">october: dead internet theory (short film)</a>
                     </div>
-                    <div class="entry">
-                        <p class="date"">03-26-26</p>
-                        <p class="entrycontent">i'm making worlds</p>
+
+                    <p>2024</p>
+                    <div id="2024" class="content topdown">
+                        <a class="nav-link" data-target="2024bdcs" data-project="cnrs" data-type="music,album">july: barren desert, concrete spires</a>   
                     </div>
-                    <div class="entry">
-                        <p class="date"">03-26-26</p>
-                        <p class="entrycontent">i'm making worlds</p>
+                </nav>
+            </section>
+
+            <!--start of project pages-->
+
+            
+
+            <section id="ghsl" class="projectdisplay">
+                <div class="miniheader">
+                    <h2 class="title simplecontainer">greyhillstarslie</h2>
+                    <div class="announcements" data-carousel="ghsl">
+                        <button class="slideLeft arrow"><</button>
+                        <div class="carousel poster">
+                            <img src="assets/images/ghslbig.jpg" alt="greyhillstarslie image" class="slide content-image photoopen" onclick="openPhoto(this)">
+                            <img src="photogallery\compressed\DSC01029-compressed.jpg" alt="field" class="slide content-image photoopen" onclick="openPhoto(this)">
+                            <img src="photogallery\compressed\DSC01368-compressed.jpg" alt="field" class="slide content-image photoopen" onclick="openPhoto(this)">
+                            <img src="photogallery\compressed\DSC08170 edit-compressed.jpg" alt="field" class="slide content-image photoopen" onclick="openPhoto(this)">
+                            <img src="photogallery\compressed\DSC01719-compressed.jpg" alt="field" class="slide content-image photoopen" onclick="openPhoto(this)">
+                            <img src="photogallery\compressed\DSC08186 edit-compressed.jpg" alt="field" class="slide content-image photoopen" onclick="openPhoto(this)">
+                            <img src="photogallery\compressed\DSC01155-compressed.jpg" alt="field" class="slide content-image photoopen" onclick="openPhoto(this)">
+                            <img src="photogallery\compressed\DSC01093-compressed.jpg" alt="field" class="slide content-image photoopen" onclick="openPhoto(this)">
+                        
+                        </div>
+                        <button class="slideRight arrow">></button>
                     </div>
+                </div>
+                <div class="minimain">
+
+
+                    <div class="description">
+                        <h2>what is this?</h2>
+                        <div class="description-container simplecontainer">
+                            <div class="content">
+                                <p>
+                                    this is my current *main* project. mainly its a music project 
+                                    (for which i plan to make at least one album for) 
+                                    but i also plan to create a short film based on the ideas of the project 
+                                    (similar to that of the dead internet theory short film)
+                                </p> 
+                            </div>
+                            <div class="content left">
+                                <p>
+                                    the major themes of the project is infinity vs intimacy 
+                                    in the context of a coming of age story. 
+                                </p> 
+                            </div>
+                            <div class="content left">
+                                <p class="center">art that inspires ghsl</p> 
+                                <ul class="three-column">
+                                    <li>night in the woods</li>
+                                    <li>outer wilds</li>
+                                    <li>donnie darko</li>
+                                    <li>car seat headrest</li>
+                                    <li>asteroid city</li>
+                                    <li>the microphones</li>
+                                    <li>serial experiments lain</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>  
+
+                    <div class="info">
+                        <h2>info</h2>
+                        <div class="info-container simplecontainer">
+                            <div class="content">
+                                <p>
+                                    dates: 2023 - current
+                                </p>
+                            </div>
+                            <div class="content">
+                                <p>
+                                    contributors: just me (and lindsey for the blue stars image)                                  
+                                </p>
+                            </div>
+                            <div class="content">
+                                <p>
+                                    project types: music, film, writing, visual                           
+                                </p>
+                            </div>
+                        </div>
+                    </div> 
+                    
+                    <div class="why overlap">
+                        <h2>why/how did you make this?</h2>
+                        <div class="why-container simplecontainer">
+                            <div class="content">
+                                <p>
+                                    i am mainly making this to process my feeling on growing older and reconciling with the
+                                    whole slyvia plath fig tree metaphor. but thats more of a symptom of the greater 
+                                    theme of my work of trying to reconcile everything outside of you against yourself.
+                                </p>
+                                <p>
+                                    i also wanted to make a project that was a bit more representative of me instead of 
+                                    a world i created that i wanted to share. this project is much more personal and 
+                                    autobiographical than other things i have worked on.
+                                </p>
+                            </div>   
+                            <div class="content">
+                                <p>
+                                    for the album im currently studying other artists and making songs without expectations 
+                                    so i can get to the skill level necessary to make the album.
+                                </p>
+                                <p>
+                                    for the short film, i plan on recording it exclusively using webcams over the course
+                                    of a couple months to a year. i had to get a second phone (a prepaid one for $30) to do this, 
+                                    which was fun to set up. once i have enough footage i'll edit it all together in a style similar
+                                    to dog star man (but with sound design).
+                                </p>
+
+                            </div> 
+                            <div class="content">
+                                <p>
+                                    tools used: fl studio, ableton live, premiere pro, obs                                  
+                                </p>
+                            </div>
+                        </div>
+                    </div>  
+
+                    <div class="links">
+                        <h2>links and additional resources</h2>
+                        <div class="links-container simplecontainer">
+                            <div class="content">
+                                <a href="photography.html" data-text="my website" target="_blank">photo gallery (images that inspire ghsl)</a>
+                            </div>
+                        </div>
+                    </div>    
                 </div>
             </section>
 
-            <p id="announcementtext1" class="text announcementtext">new stuff</p>
-            <p id="announcementtext2" class="text announcementtext">check this out</p>
-
-            <section id="announcements">
-                <button id="slideLeft" class="arrow"><</button>
-                <div id="carousel" class="poster">
-                    <a href="https://youtu.be/CR_JFgO11Qw" target="_blank" rel="noopener noreferrer"><img id="dit" class="slide" src="assets/carousel/dit.png"></a>
-                    <a href="https://distrokid.com/hyperfollow/crownorthrailwaystation/barren-desert-concrete-spires" target="_blank" rel="noopener noreferrer"><img id="bdcs" class="slide" src="assets/carousel/bdcs.jpg"></a>
+            <section id="b43ey" class="projectdisplay">
+                <div class="miniheader">
+                    <h2 class="title simplecontainer">b43ey</h2>
+                    <img src="assets/images/dit.jpg" alt="clouds in the sky" class="hero photoopen" onclick="openPhoto(this)">
                 </div>
-                <button id="slideRight" class="arrow">></button>
+                <div class="minimain">
+
+
+                    <div class="description">
+                        <h2>what is this?</h2>
+                        <div class="description-container simplecontainer">
+                            <div class="content">
+                                <p>
+                                    b43ey is a conceptual ambient/noise music project focusing on the state of being
+                                    subsumed into infinity and how our consciousness responds to it. 
+                                </p> 
+                            </div>
+                            <div class="content left">
+                                <p>
+                                    the main project 
+                                    of b43ey, dead internet theory, depicts how the human consciousness would experience inside the internet, 
+                                    exploring the loneliness and true weight of exisiting  in a boundless, timeless reality,
+                                    left with only the remnants of the people who used to exist there
+                                </p> 
+                            </div>
+                            <div class="content left">
+                                <p class="center">art that inspires b43ey</p> 
+                                <ul class="three-column">
+                                    <li>pantheon (tv)</li>
+                                    <li>serial experiments lain</li>
+                                    <li>merzbow</li>
+                                    <li>2003 toyota corolla</li>
+                                    <li>belong (music)</li>
+                                    <li>soma</li>
+                                    <li>cowboy bebop</li>
+                                    <li>sonny boy</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>  
+
+                    <div class="info">
+                        <h2>info</h2>
+                        <div class="info-container simplecontainer">
+                            <div class="content">
+                                <p>
+                                    dates: 2023 - current
+                                </p>
+                            </div>
+                            <div class="content">
+                                <p>
+                                    contributors: just me :)                                  
+                                </p>
+                            </div>
+                            <div class="content">
+                                <p>
+                                    project types: visual, music, film                        
+                                </p>
+                            </div>
+                        </div>
+                    </div> 
+                    
+                    <div class="why overlap">
+                        <h2>why/how did you make this?</h2>
+                        <div class="why-container simplecontainer">
+                            <div class="content">
+                                <p>
+                                    im mainly making this project as a way to explore the distinct feeling of dreams/infinite 
+                                    reality i get. it also works as a way to explore the idea of dreamworlds, which are realties
+                                    that come into existence via your cognition of them and which are defined by distinct feelings
+                                </p>
+                                <p>
+                                    i also really wanted to make an ambient music project that was less focused on songwriting
+                                    and more on the feeling that came from the texture of the sound
+                                </p>
+                            </div>   
+                            <div class="content">
+                                <p>
+                                    currently, i work by starting with a sample, live signal, or synthesizer and improvise adding
+                                    effects over it in fl studio. i then take this recording and put it into audacity where i chop and
+                                    skew the clip until i like every part of it. after i have a decent amoung of clips i structure them together
+                                </p>
+                                <p>
+                                    i'm also exploring incorporating sstv images into the music somehow to depict how the human consciousness processes (or creates)
+                                    visual information.
+                                </p>
+                            </div> 
+                            <div class="content">
+                                <p>
+                                    tools used: fl studio, ableton                               
+                                </p>
+                            </div>
+                        </div>
+                    </div>  
+
+                    <div class="links">
+                        <h2>links and additional resources</h2>
+                        <div class="links-container simplecontainer">
+                            <div class="content">
+                                <a href="index.html#2025dit" data-text="dead internet theory short film">dead internet theory short film</a>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
             </section>
 
-            <section id="comments" class="simplecontainer">
-                <h2>comments</h2>
-                <div id="content">
-                    <script>
-                        chattable.initialize({
-                            stylesheet: "chattable.css"
-                        });
-                    </script>
-                    <iframe title="chat" src="https://iframe.chat/embed?chat=bluboebchatsitesupersecretchat" id="chattable"></iframe>
+            <section id="parkercollab" class="projectdisplay">
+                <div class="miniheader">
+                    <h2 class="title simplecontainer">parker collab</h2>
+                    <img src="assets/images/parkercollab.png" alt="frame from short film we did" class="hero photoopen" onclick="openPhoto(this)">
+                </div>
+                <div class="minimain">
 
+
+                    <div class="description">
+                        <h2>what is this?</h2>
+                        <div class="description-container simplecontainer">
+                            <div class="content">
+                                <p>
+                                    this project encapsulates pretty much everything me and parker work on together 
+                                    as the main goal of these projects is collaboration rather than a larger conceptual
+                                    idea like my other projects.
+                                </p> 
+                            </div>
+                            <div class="content left">
+                                <p>
+                                    this collaboration originally started after parker worked as the lead actor in 
+                                    dead internet theory (short film).  since then we have worked on another short film
+                                    and have attempted to write some songs (not much progress yet though).
+                                </p> 
+                            </div>
+                        </div>
+                    </div>  
+
+                    <div class="info">
+                        <h2>info</h2>
+                        <div class="info-container simplecontainer">
+                            <div class="content">
+                                <p>
+                                    dates: 2025 - current
+                                </p>
+                            </div>
+                            <div class="content">
+                                <p>
+                                    contributors: harrison, parker                               
+                                </p>
+                            </div>
+                            <div class="content">
+                                <p>
+                                    project types: music, film, collaboration                        
+                                </p>
+                            </div>
+                        </div>
+                    </div> 
+                    
+                    <div class="why overlap">
+                        <h2>why/how did you make this?</h2>
+                        <div class="why-container simplecontainer">
+                            <div class="content">
+                                <p>
+                                    most of the art ive created has been a solo endeavor for one reason or another so 
+                                    its been very rewarding as well as challenging to do collaborative work. 
+                                </p>
+                            </div>   
+                            <div class="content">
+                                <p>
+                                    we've tried a bunch of different strategies for collaboration but for right now
+                                    we usually have one person take the creative lead and have the other offer
+                                    support to that idea.
+                                </p>
+                                <p>
+                                    we also typically work on time constraints since we live pretty far 
+                                    apart for the majority of the year which ensures that the projects get done
+                                    and don't get stuck in development hell.
+                                </p>
+                            </div> 
+                            <div class="content">
+                                <p>
+                                    tools used: fl studio, premiere pro, teamwork :)                             
+                                </p>
+                            </div>
+                        </div>
+                    </div>  
+
+                    <div class="links">
+                        <h2>links and additional resources</h2>
+                        <div class="links-container simplecontainer">
+                            <div class="content">
+                                <a href="index.html#2025dit" data-text="dead internet theory short film">dead internet theory short film</a>
+                            </div>
+                        </div>
+                    </div>    
                 </div>
             </section>
 
-            <section id="contact" class="simplecontainer">
-                <h2>contact me!</h2>
-                <div class="content">
-                    <form id="contactform" method="post" action="#">
-                        <label for="name">name:</label>
-                        <input type="text" id="name" name="name" required>
+            <section id="friendcities" class="projectdisplay">
+                <div class="miniheader">
+                    <h2 class="title simplecontainer">friendcities</h2>
+                    <img src="assets/images/friendcities.png" alt="friendcities logo" class="hero">
+                </div>
+                <div class="minimain">
 
-                        <label for="email">email:</label>
-                        <input type="email" id="email" name="email" required>
+                    <div class="description">
+                        <h2>what is this?</h2>
+                        <div class="description-container simplecontainer">
+                            <div class="content">
+                                <p>
+                                    friendcities is an arizona-based art magazine that celebrates art and community that i joined in late 2025
+                                </p> 
+                            </div>
+                            <div class="content left">
+                                <p>
+                                    i mainly contribute photography and some writing to the volumes but the zine also has articles, videos, and interviews to check out as well.
+                                </p> 
+                            </div>
+                            <div class="content">
+                                projects ive done with friendcities
+                                <table id="fctable">
+                                    <tr>   
+                                        <th>vol10</th>
+                                        <th>vol11</th>
+                                        <th>vol12</th>
+                                    </tr>
+                                    <tr>
+                                        <td>contributed a submission</td>
+                                        <td>attended launch party</td>
+                                        <td>tbd</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>  
 
-                        <label for="website">website:</label>
-                        <input type="url" id="website" name="website">
+                    <div class="info">
+                        <h2>info</h2>
+                        <div class="info-container simplecontainer">
+                            <div class="content">
+                                <p>
+                                    dates: 2025 - current
+                                </p>
+                            </div>
+                            <div class="content">
+                                <p>
+                                    contributors: friendcities (too many names to list)                             
+                                </p>
+                            </div>
+                            <div class="content">
+                                <p>
+                                    project types (what i contribute): visual, writing                  
+                                </p>
+                            </div>
+                        </div>
+                    </div> 
+                    
+                    <div class="why overlap">
+                        <h2>why/how did you make this?</h2>
+                        <div class="why-container simplecontainer">
+                            <div class="content">
+                                <p>
+                                    ive always wanted to be part of a greater community of artists and this has been
+                                    a great opportunity to get that experience.
+                                </p>
+                                <p>
+                                    it also forces me to get more into creating visual works besides the photos i take which
+                                    has been challenging but still fun. its also been nice to make small things that will
+                                    get seen by other people.
+                                </p>
+                            </div>   
+                            <div class="content">
+                                <p>
+                                    for the contributions i typically do, i go into paint.net and arranged photos i've taken along
+                                    with other graphics i make and mess around until it looks okay
+                                </p>
+                                <p>
+                                    i'm also planning on creating submissions for the zine with other people which will make the collaboration
+                                    element even more awesome and fun
+                                </p>
+                            </div> 
+                            <div class="content">
+                                <p>
+                                    tools used: paint.net                          
+                                </p>
+                            </div>
+                        </div>
+                    </div>  
 
-                        <label for="message">message:</label>
-                        <textarea id="message" name="message" rows="2" cols="30" required></textarea>
-
-                        <input type="submit" value="submit">
-                    </form>
+                    <div class="links">
+                        <h2>links and additional resources</h2>
+                        <div class="links-container simplecontainer">
+                            <div class="content">
+                                <a href="https://friendcities.art/" data-text="friendcities site">friendcities site</a>
+                            </div>
+                            <div class="content">
+                                <a href="https://www.instagram.com/friendcities/">friendcities instagram</a>
+                            </div>
+                        </div>
+                    </div>    
                 </div>
             </section>
 
-            <section id="recommendations" class="simplecontainer">
-                <h2>other artists/groups to check out</h2>
-                <div class="content">
-                    <ul>
-                        <li><a href="https://friendcities.art/">friendcities</a></li>
-                        <p>artzine that i am a collaborator for :p</p>
-                        <li><a href="https://friendcities.art/">to be added later</a></li>
-                        <p>to be added later</p>
-                        <li><a href="https://friendcities.art/">to be added later</a></li>
-                        <p>to be added later</p>
-                        <li><a href="https://friendcities.art/">to be added later</a></li>
-                        <p>to be added later</p>
-                        <li><a href="https://friendcities.art/">to be added later</a></li>
-                        <p>to be added later</p>
-                        <li><a href="https://friendcities.art/">to be added later</a></li>
-                        <p>to be added later</p>
-                    </ul>
+            <!-- not released yet
+            <section id="2026usfsf class="projectdisplay visible">
+                
+                <div class="miniheader">
+                    <h2 class="title simplecontainer">welcome to dreamworlds</h2>                    
+                    <div class="announcements" data-carousel="website">
+                        <button class="slideLeft arrow"><</button>
+                        <div class="carousel poster">
+                            <a class="nav-link" data-target="2025dit"><img id="dit-announcment" class="slide" src="assets/carousel/dit.png"></a>
+                            <a class="nav-link" data-target="2024bdcs" data-project="cnrs"><img id="bdcs" class="slide" src="assets/carousel/bdcs.jpg"></a>
+                        </div>
+                        <button class="slideRight arrow">></button>
+                    </div>
                 </div>
+
+                <div class="minimain">
+                    
+                    <p id="announcementtext1" class="text announcementtext">new stuff</p>
+                    <p id="announcementtext2" class="text announcementtext">check this out</p>
+
+                    <div class="description">
+                        <h2>what is this?</h2>
+                        <div class="description-container simplecontainer">
+                            <div class="content">
+                                <p>
+                                    hi! this is a website i made centralize all my art and act as my personal website.  
+                                    it is also my first website so  i apologize if things are formatted a bit oddly. 
+                                    here is a look at my first attempt...
+                                </p> 
+                            </div>
+                            <div class="content">
+                                <img src="assets/contentimages/intro-site.jpg" alt="image of old website" class="content-image photoopen" onclick="openPhoto(this)">
+                                <p>(ignore how much better and more awesome it looked)</p> 
+                            </div>
+                        </div>
+                    </div>  
+
+                    <div class="info">
+                        <h2>info</h2>
+                        <div class="info-container simplecontainer">
+                            <div class="content">
+                                <p>
+                                    dates: 3/31/26 - whenever i upload this lol
+                                </p>
+                            </div>
+                            <div class="content">
+                                <p>
+                                    contributors: just me :)                                  
+                                </p>
+                            </div>
+                            <div class="content">
+                                <p>
+                                    type: visual, coding, writing                             
+                                </p>
+                            </div>
+                            <div class="content">
+                                <p>
+                                    project for: other (general)                                    
+                                </p>
+                            </div>
+                        </div>
+                    </div> 
+                    
+                    <div class="why overlap">
+                        <h2>why/how did you make this?</h2>
+                        <div class="why-container simplecontainer">
+                            <div class="content">
+                                <p>
+                                    like i said in the "what is this?" section, 
+                                    i mainly made this a one-click place for people to 
+                                    check out my art as well as a personal site for people to learn more about me. 
+                                </p>
+                            </div>   
+                            <div class="content">
+                                <p>
+                                    the main reason im making this site now is because i took a web development class for fun 
+                                    and the final project was to make a site. which is perfect since it means i have a 
+                                    deadline to motivate me to actually finish it. 
+                                </p>
+                                <p>
+                                    plus i have the additional pressure of having to get a project out each week due to this 
+                                    challenge i have with parker
+                                    where i need to finish a project every week or i have to pay him $50.
+                                </p>
+                                <p>
+                                    so i've been pretty motivated to get it done lol. its only take me about a week of 
+                                    consistent work when im home to get it done and it almost here so yay!
+                                </p>
+                            </div> 
+                            <div class="content">
+                                <p>
+                                    tools used: vs code, paint.net                                    
+                                </p>
+                            </div>
+                        </div>
+                    </div>  
+
+                    <div class="links">
+                        <h2>links and additional resources</h2>
+                        <div class="links-container simplecontainer">
+                            <div class="content">
+                                <a href="https://bluboeb.neocities.org" data-text="my website" target="_blank">link to project (you are already here)</a>
+                            </div>
+                            <div class="content">
+                                <a href="oldwebsite/oldsite.html" data-text="old site" target="_blank">old site</a>
+                            </div>
+                            <div class="content">
+                                <a href="https://ninacti0n.art/" data-text="old site" target="_blank">ninacti0n (inspired this site)</a>
+                            </div>
+                            <div class="content">
+                                <a href="https://www.shimmerwitch.space/" data-text="old site" target="_blank"> shimmerwitch (inspired this site)</a>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+                
+            </section>
+            -->
+
+            <section id="2026website" class="projectdisplay visible">
+                
+                <div class="miniheader">
+                    <h2 class="title simplecontainer">welcome to dreamworlds</h2>                    
+                    <div class="announcements" data-carousel="website">
+                        <button class="slideLeft arrow"><</button>
+                        <div class="carousel poster">
+                            <a class="nav-link" data-target="2024bdcs" data-project="cnrs"><img id="bdcs" class="slide" src="assets/images/bdcs.jpg"></a>
+                            <a class="nav-link" data-target="2025dit"><img id="dit-announcment" class="slide" src="assets/images/dit.png"></a>
+                        </div>
+                        <button class="slideRight arrow">></button>
+                    </div>
+                </div>
+
+                <div class="minimain">
+                    
+                    <p id="announcementtext1" class="text announcementtext">new stuff</p>
+                    <p id="announcementtext2" class="text announcementtext">check this out</p>
+
+                    <div class="description">
+                        <h2>what is this?</h2>
+                        <div class="description-container simplecontainer">
+                            <div class="content">
+                                <p>
+                                    hi! this is a website i made centralize all my art and act as my personal website.  
+                                    it is also my first website so  i apologize if things are formatted a bit oddly. 
+                                    here is a look at my first attempt...
+                                </p> 
+                            </div>
+                            <div class="content">
+                                <img src="assets/contentimages/intro-site.jpg" alt="image of old website" id="oldsite" class="content-image photoopen" onclick="openPhoto(this)">
+                                <p>(ignore how much better and more awesome it looked)</p> 
+                            </div>
+                        </div>
+                    </div>  
+
+                    <div class="info">
+                        <h2>info</h2>
+                        <div class="info-container simplecontainer">
+                            <div class="content">
+                                <p>
+                                    dates: 3/31/26 - whenever i upload this lol
+                                </p>
+                            </div>
+                            <div class="content">
+                                <p>
+                                    contributors: just me :)                                  
+                                </p>
+                            </div>
+                            <div class="content">
+                                <p>
+                                    type: visual, coding, writing                             
+                                </p>
+                            </div>
+                            <div class="content">
+                                <p>
+                                    project for: other (general)                                    
+                                </p>
+                            </div>
+                        </div>
+                    </div> 
+                    
+                    <div class="why overlap">
+                        <h2>why/how did you make this?</h2>
+                        <div class="why-container simplecontainer">
+                            <div class="content">
+                                <p>
+                                    like i said in the "what is this?" section, 
+                                    i mainly made this a one-click place for people to 
+                                    check out my art as well as a personal site for people to learn more about me. 
+                                </p>
+                            </div>   
+                            <div class="content">
+                                <p>
+                                    the main reason im making this site now is because i took a web development class for fun 
+                                    and the final project was to make a site. which is perfect since it means i have a 
+                                    deadline to motivate me to actually finish it. 
+                                </p>
+                                <p>
+                                    plus i have the additional pressure of having to get a project out each week due to this 
+                                    challenge i have with parker
+                                    where i need to finish a project every week or i have to pay him $50.
+                                </p>
+                                <p>
+                                    so i've been pretty motivated to get it done lol. its only take me about a week of 
+                                    consistent work when im home to get it done and it almost here so yay!
+                                </p>
+                            </div> 
+                            <div class="content">
+                                <p>
+                                    tools used: vs code, paint.net                                    
+                                </p>
+                            </div>
+                        </div>
+                    </div>  
+
+                    <div class="links">
+                        <h2>links and additional resources</h2>
+                        <div class="links-container simplecontainer">
+                            <div class="content">
+                                <a href="https://bluboeb.neocities.org" data-text="my website" target="_blank">link to website (you are already here)</a>
+                            </div>
+                            <div class="content">
+                                <a href="oldwebsite/oldsite.html" data-text="old site" target="_blank">old site</a>
+                            </div>
+                            <div class="content">
+                                <a href="https://ninacti0n.art/" data-text="old site" target="_blank">ninacti0n (inspired this site)</a>
+                            </div>
+                            <div class="content">
+                                <a href="https://www.shimmerwitch.space/" data-text="old site" target="_blank"> shimmerwitch (inspired this site)</a>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+                
+            </section>
+
+            <section id="2025fc10" class="projectdisplay">
+                
+                <div class="miniheader">
+                    <h2 class="title simplecontainer">night on the town</h2>
+                    <img src="assets/images/friendcitiesvol10.png" alt="submission for friendcities" class="hero photoopen" onclick="openPhoto(this)">
+                </div>
+
+                <div class="minimain">
+
+                    <div class="description">
+                        <h2>what is this?</h2>
+                        <div class="description-container simplecontainer">
+                            <div class="content left">
+                                <p>
+                                    this is a submission i made for vol 10 of friendcities! 
+                                </p> 
+                                <p>
+                                    the prompt was "night on the town" 
+                                    so i decided to make something that mixed coming-of-age accounts of life
+                                    with the night as a kind of infinity in a way distinct from social infinity. i also mixed it with some light "bending reality
+                                    with your own mind" sci-fi ideas which was inspired by donnie darko and kick the tragedy
+                                    by drop nineteens. which is a world i hope to explore more in later projects.
+                                </p>
+                            </div>
+                        </div>
+                    </div>  
+
+                    <div class="info">
+                        <h2>info</h2>
+                        <div class="info-container simplecontainer">
+                            <div class="content">
+                                <p>
+                                    dates: 12/5/2025
+                                </p>
+                            </div>
+                            <div class="content">
+                                <p>
+                                    contributors: just me :)                                  
+                                </p>
+                            </div>
+                            <div class="content">
+                                <p>
+                                    type: visual, writing                             
+                                </p>
+                            </div>
+                            <div class="content">
+                                <p>
+                                    project for: friendcities                                   
+                                </p>
+                            </div>
+                        </div>
+                    </div> 
+                    
+                    <div class="why overlap">
+                        <h2>why/how did you make this?</h2>
+                        <div class="why-container simplecontainer">
+                            <div class="content">
+                                <p>
+                                    i made this since it was the 10th volume and andrue wanted everyone to 
+                                    contribute for it! i was a bit busy at the time but i was able to get this done
+                                    in a day so it wasn't too much trouble.
+                                </p>
+                                <p>
+                                    it was also fun to make something quickly that wouldn't take me several months 
+                                    of work to do :p. plus i learned a decent bit doing it so my next submission will hopefully
+                                    be much better (im not a big fan of the composition in this one)
+                                </p>
+                            </div>   
+                            <div class="content">
+                                <p>
+                                    i started by finding a photo that i thought would act as a nice background and then blended 
+                                    it with some drawings and other photos. after that i wrote out a bunch of text that felt like
+                                    the image and put it on the left side. lastly i put a datamoshing effect from website (im
+                                    not sure which one but if i find it i'll link it).
+                                </p>
+                            </div> 
+                            <div class="content">
+                                <p>
+                                    tools used: paint.net                                    
+                                </p>
+                            </div>
+                        </div>
+                    </div>  
+
+                    <div class="links">
+                        <h2>links and additional resources</h2>
+                        <div class="links-container simplecontainer">
+                            <div class="content">
+                                <a href="https://friendcities.art/ereader/vol10/vol10" data-text="my website" target="_blank">friendcities vol 10</a>
+                            </div>
+                            <div class="content">
+                                <a href="https://www.instagram.com/p/DTGYfUHklmt/?img_index=1" data-text="old site" target="_blank">instagram post of submission</a>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+                
+            </section>
+
+            <section id="2025dit" class="projectdisplay">
+                
+                <div class="miniheader">
+                    <h2 class="title simplecontainer">dead internet theory (short film)</h2>                    
+                    <div class="announcements" data-carousel="website">
+                        <button class="slideLeft arrow"><</button>
+                        <div id="ditcarousel" class="carousel poster">
+                            <video class="slide" loop="true" autoplay="autoplay" muted>
+                                <source src="assets/videos/ditclip.mp4" type="video/mp4">
+                            </video>
+                            <iframe class="slide" src="https://www.youtube.com/embed/CR_JFgO11Qw?si=C2qHZnxxq6P68S4F" 
+                            title="dead internet theory" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+                            gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                            </iframe>
+                        </div>
+                        <button class="slideRight arrow">></button>
+                    </div>
+                </div>
+
+                <div class="minimain">
+
+                    <div class="description">
+                        <h2>what is this?</h2>
+                        <div class="description-container simplecontainer">
+                            <div class="content">
+                                <p>
+                                    dead internet theory is a short film based off the b43ey album of the same name. however, its less about computers
+                                    and more about exploring a similar kind of reality to dead internet theory, which means the name is a little off the 
+                                    mark but its okay.
+                                </p>   
+                            </div>
+                            <div class="content">
+                                <p>
+                                    dead internet theory is also the first short film i have done and it came out a lot better than i expected, 
+                                    but i also had experience with all the skills surrounding film (video editing, photography/camera operation, etc). 
+                                    the most valuable lesson i learned from this project is that film can be a very effective way 
+                                    of exploring my ideas while collaborating with others in a way i had not considered before.
+                                </p>   
+                            </div>
+                        </div>
+                    </div>  
+
+                    <div class="info">
+                        <h2>info</h2>
+                        <div class="info-container simplecontainer">
+                            <div class="content">
+                                <p>
+                                    dates: 3/9/25-10/10/25
+                                </p>
+                            </div>
+                            <div class="content">
+                                <p>
+                                    contributors: harrison and parker                               
+                                </p>
+                            </div>
+                            <div class="content">
+                                <p>
+                                    type: film                            
+                                </p>
+                            </div>
+                            <div class="content">
+                                <p>
+                                    project for: parker collab                                 
+                                </p>
+                            </div>
+                        </div>
+                    </div> 
+                    
+                    <div class="why overlap">
+                        <h2>why/how did you make this?</h2>
+                        <div class="why-container simplecontainer">
+                            <div class="content">
+                                <p>
+                                    im not gonna lie the main reason i made this short film is because i was taking an independent film class and need to make an
+                                    experimental short film for the final project. however, along the way, i realized that making short films is actually really fun
+                                    and something i want to do with people way more often.
+                                </p>
+                            </div>   
+                            <div class="content">
+                                <p>
+                                    for the most part this entire project was improvised. i had an idea in my head about how it could go and wanted to try it. i based scenes
+                                    on the environments i had access to and the some technical things i knew i could pull off. the elements i knew before shooting is that
+                                    the blue projector screen represented a kind of init or abstract state, the protagonist needed to wear a dress shirt and look dishelved, and thats
+                                    pretty much it. most of the intentional thematic decisions were done while editing and a lot of them were more informed by feeling that logic.
+                                </p>
+                                <p>
+                                    i also created all the sound for this project in the same workflow as the b43ey project which i think gave the film an interesting atmosphere.
+                                </p>
+                            </div> 
+                            <div class="content">
+                                <p>
+                                    tools used: audacity, fl studio, premiere pro                                  
+                                </p>
+                            </div>
+                        </div>
+                    </div>  
+
+                    <div class="links">
+                        <h2>links and additional resources</h2>
+                        <div class="links-container simplecontainer">
+                            <div class="content">
+                                <a href="https://youtu.be/CR_JFgO11Qw" target="_blank" rel="noopener noreferrer">watch on youtube</a>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+                
+            </section>
+
+            <section id="2024bdcs" class="projectdisplay">
+                
+                <div class="miniheader">
+                    <h2 class="title simplecontainer">barren desert, concrete spires</h2>
+                    <div id="bdcsheader">                   
+                        <img id="bdcshero" src="assets/images/bdcs.jpg" class="photoopen" onclick="openPhoto(this)">
+                        <iframe id="bdcsplayer" 
+                        src="https://bandcamp.com/EmbeddedPlayer/album=2708162072/size=large/bgcol=333333/linkcol=0f91ff/artwork=none/transparent=true/" seamless>
+                            <a href="https://crownorthrailwaystation.bandcamp.com/album/barren-desert-concrete-spires">
+                                Barren Desert, Concrete Spires by Crow North Railway Station
+                            </a>
+                        </iframe>
+                    </div>
+                </div>
+
+                <div class="minimain">
+
+                    <div class="description">
+                        <h2>what is this?</h2>
+                        <div id="bdcsdescription" class="description-container simplecontainer">
+                            <div class="content">
+                                <p>
+                                    barren desert, concrete spires (bdcs) is not my first music project. however it is the first one that i think is worth listing. the album is
+                                    best described as a high school project. it was incredibly ambitious and emotional therefore i thought necessitated perfection from me. 
+                                    the album was also mainly about a relationship and my reaction to it, which is definitely the most "high school" part of it
+                                </p>   
+                            </div>
+                            <div class="content">
+                                <p>
+                                    as a result of the pressure i put on the album, it took nearly 3 years to complete. i also lacked a lot of the skills necessary 
+                                    to create an album which didn't help. after a while i stopped feeling the emotions of it and just wanted to get it out, which im glad i did
+                                    since now i look back on it in a more positive light as i think it creates a pretty nice atmosphere, decent track variety, and (to me) a very distinct 
+                                    way of telling its story through post rock, field recordings, and ambient music. it does have some pretty big issues, like the mixing
+                                    is extremely hit or miss though since a good 8 months of the album was spent trying to the lo-fi recorded album sound less lo-fi which went
+                                    against my whole vision in the first place. (like seriously one of the major inspirations was have a nice life's deathconsciousness and that
+                                    whole album is horrible quality)
+                                </p>
+                                <p>
+                                    anyways, it marks the start of my more conceptual art and im surprised i didnt play silent hill 2 before i released this because the 
+                                    radio static/barren environment/cyclical imagery is so similar AND the plot follows someone avoiding guilt via self-punishment and descension, like brah.
+                                </p> 
+                            </div>  
+                        </div>
+                    </div>  
+
+                    <div class="info">
+                        <h2>info</h2>
+                        <div class="info-container simplecontainer">
+                            <div class="content">
+                                <p>
+                                    dates: 3/9/25-10/10/25
+                                </p>
+                            </div>
+                            <div class="content">
+                                <p>
+                                    contributors: just me :p                              
+                                </p>
+                            </div>
+                            <div class="content">
+                                <p>
+                                    type: music, album                            
+                                </p>
+                            </div>
+                            <div class="content">
+                                <p>
+                                    project for: crow north railway station                             
+                                </p>
+                            </div>
+                        </div>
+                    </div> 
+                    
+                    <div id="bdcswhy" class="why overlap">
+                        <h2>why/how did you make this?</h2>
+                        <div class="why-container simplecontainer">
+                            <div class="content">
+                                <p>
+                                    i made this album because i had just really into more conceptual music and also had an inner world that i needed to express.
+                                    a distinct memory that inspired the album was when i was driving home from prom with the person the album is mainly about 
+                                    (see why i call this a high school album) while listening to have a nice life's deathconsciousness. in the city i live in there is
+                                    a lot of factories and industrial areas along the edges of the suburban areas and the coldness of that area in the context of night
+                                    gave me the idea of someone descending into a reality created by their self-punishment and isolation. so in a way the album is very
+                                    autobiographical as that effectively what i wanted to do. which is why i decided to give the album a nice ending as i thought there was
+                                    hope at the end of the hardship, which there was.
+                                </p>
+                            </div>   
+                            <div class="content">
+                                <p>
+                                    the development of this album is a real mess since i had no idea what i was doing but generally i would create demos that would inspire narrative
+                                    beats and then those would inspire more demos. i had to brute force my way through most phases of developing the songs since it was my first time doing
+                                    vocals, lyrics, mixing, mastering and all that fun stuff. overall im decently happy with the result and enjoy it for what it is, knowing i learned a lot
+                                    from the experience. plus some sections genuinely are quite good, like the cyclical structure of coyotes, like maybe i was cooking a little bit...
+                                </p>
+                            </div> 
+                            <div class="content">
+                                <p>
+                                    tools used: fl studio, paint.net, audacity                                
+                                </p>
+                            </div>
+                        </div>
+                    </div>  
+
+                    <div id="bdcsinfo" class="links">
+                        <h2>links and additional resources</h2>
+                        <div class="links-container simplecontainer">
+                            <div class="content">
+                                <a href="https://crownorthrailwaystation.bandcamp.com/album/barren-desert-concrete-spires" target="_blank" rel="noopener noreferrer">bandcamp</a>
+                            </div>
+                            <div class="content">
+                                <a href="https://music.apple.com/us/album/barren-desert-concrete-spires/1754933063" target="_blank" rel="noopener noreferrer">apple music</a>
+                            </div>
+                            <div class="content">
+                                <a href="https://open.spotify.com/album/2FSa6ldJxwEywU3bjMNHX0" target="_blank" rel="noopener noreferrer">spotify</a>
+                            </div>
+                            <div class="content">
+                                <a href="https://music.youtube.com/playlist?list=OLAK5uy_mAJ0eZqUPG1TNwwT6NqhN2CN5mnXXQW00" target="_blank" rel="noopener noreferrer">youtube</a>
+                            </div>
+                            <div class="content">
+                                <a href="https://soundcloud.com/crownorthrailwaystation/sets/barren-desert-concrete-spires" target="_blank" rel="noopener noreferrer">soundcloud</a>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+                
             </section>
         </main>
+            
+        <div id="overlay" onclick="closePhoto()">
+            <img id="overlay-img" src="" onclick="toggleZoom(event)">
+        </div>
+
 
         <input type="checkbox" id="musicToggle" hidden>
         <label for="musicToggle" id="musicplayer-tab">music</label>
 
         <section id="musicplayer">
-            <h2>music player</h2>
+            <p></p>
             <div id="content"> 
                 <audio id="audio" preload="metadata" tabindex="none"></audio>
                 <select id="songSelect">
@@ -159,9 +1129,8 @@
         </section>
 
         <footer>
-            <a href="#top">back to top</a>
             <section id="footer-content" class="simplecontainer">
-                bluboeb, 2026 - forever. all rights reserved.<br>
+                harrison nolin, 2026 - forever. all rights reserved.<br>
             </section>
         </footer>
     </body>

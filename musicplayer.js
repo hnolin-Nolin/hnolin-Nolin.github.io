@@ -41,6 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
         totalTime.textContent = formatTime(audio.duration || 0);
     }
 
+    /*
     // Playback lifecycle
     audio.addEventListener('canplaythrough', function() {
         audio.play().catch(function(e) {
@@ -51,6 +52,8 @@ document.addEventListener('DOMContentLoaded', function() {
     audio.addEventListener('ended', function() {
         audio.play();
     });
+
+    */
 
     // Transport controls
     playBtn.addEventListener('click', function() {

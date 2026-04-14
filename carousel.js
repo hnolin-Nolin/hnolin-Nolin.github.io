@@ -1,39 +1,45 @@
-// Carousel functionality for fading between images
+// Carousel functionality - supports multiple independent carousels
 document.addEventListener('DOMContentLoaded', function() {
-    // Get all slide elements and navigation buttons
-    const slides = document.querySelectorAll(".slide");
-    const prevButton = document.getElementById("slideLeft");
-    const nextButton = document.getElementById("slideRight");
 
-    let currentSlide = 0;
+    // Find all carousel wrapper elements
+    // Each carousel wrapper should have:
+    //   data-carousel attribute (unique name)
+    //   a left button with class "slideLeft"
+    //   a right button with class "slideRight"
+    //   slides with class "slide" inside it
+    const carousels = document.querySelectorAll('[data-carousel]');
 
-    // Function to show a specific slide by index
-    function showSlide(index) {
-        // Loop through all slides and toggle the 'active' class
-        slides.forEach((slide, i) => {
-            if (i === index) {
-                slide.classList.add('active'); // Show this slide
-            } else {
-                slide.classList.remove('active'); // Hide others
-            }
-        });
-        currentSlide = index; // Update current slide index
-    }
+    carousels.forEach(function(carouselWrapper) {
+        const slides = carouselWrapper.querySelectorAll('.slide');
+        const prevButton = carouselWrapper.querySelector('.slideLeft');
+        const nextButton = carouselWrapper.querySelector('.slideRight');
 
-    // Event listener for next button
-    nextButton.addEventListener("click", () => {
-        let nextIndex = currentSlide + 1;
-        if (nextIndex >= slides.length) nextIndex = 0; // Loop back to first
-        showSlide(nextIndex);
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
+            });
+            currentSlide = index;
+        }
+
+        if (nextButton) {
+            nextButton.addEventListener('click', () => {
+                let nextIndex = currentSlide + 1;
+                if (nextIndex >= slides.length) nextIndex = 0;
+                showSlide(nextIndex);
+            });
+        }
+
+        if (prevButton) {
+            prevButton.addEventListener('click', () => {
+                let prevIndex = currentSlide - 1;
+                if (prevIndex < 0) prevIndex = slides.length - 1;
+                showSlide(prevIndex);
+            });
+        }
+
+        showSlide(0);
     });
 
-    // Event listener for previous button
-    prevButton.addEventListener("click", () => {
-        let prevIndex = currentSlide - 1;
-        if (prevIndex < 0) prevIndex = slides.length - 1; // Loop to last
-        showSlide(prevIndex);
-    });
-
-    // Show first slide initially
-    showSlide(0);
 });

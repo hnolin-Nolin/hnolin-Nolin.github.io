@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>dreamworlds</title>
+        <link rel="stylesheet" href="styles.css" />
+        <script src="https://iframe.chat/scripts/main.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">   
+    </head>
+    <body>
+        <a id="title" href="../index.html">
+            <header>   
+                <div class="title">
+                    <p>welcome to bluboeb's dreamworlds</p>
+                </div>
+            </header>
+        </a>
+        <div class="center">
+                <section>
+                    <div class="window">
+                    <p>navigation</p>
+                    <div class="content" id="nav">
+                        <p>
+                            <a href="index.html">blog</a>
+                            |
+                            <a href="index.html">art projects</a>
+                            |
+                            <a href="index.html">reccomendations</a>
+                            |
+                            <a href="index.html">photography</a>    
+                        </p>
+                    </div>
+                    
+                </div>
+                </section>
+            </div>
+        <main>
+            <div class="left">
+                <section>
+                    <div class="window">
+                    <p>about me :P</p>
+
+                    <div class="content">
+                        <p>
+                            i'm inside a <a href="index.html">box</a>
+                            <img width=40px src="images/smosh.jpg"> 
+                        </p>
+                    </div>
+                    <p> 
+                            this is
+                            <span class="comment">awesome</span>
+                        </p>
+                    <button onclick="buttonClicked()">Click me</button>
+                </div>
+                </section>
+            </div>   
+            <div class="middle">
+                <section>
+                    <div class="window">
+                    <p>about me :P</p>
+                    <p>i'm creating worlds</p>
+                    <div class="content">
+                        <p>
+                            i'm inside a <a href="index.html">box</a>
+                            <img width=40px src="images/smosh.jpg"> 
+                        </p>
+                    </div>
+                    <p> 
+                            this is
+                            <span class="comment">awesome</span>
+                        </p>
+                    <button onclick="buttonClicked()">Click me</button>
+                </div>
+                </section>
+            </div>
+            <div class="right">
+                <section>
+                    <div class="window">
+                    <p>comment :P</p>
+                    <div class="content">
+                        <script>
+                        chattable.initialize({
+                            stylesheet: "chattable.css"
+                        });
+                        </script>
+                        <iframe title="chat" src="https://iframe.chat/embed?chat=bluboebchatsitesupersecretchat" id="chattable"></iframe>
+                    </div>
+                    <p> 
+                            this is
+                            <span class="comment">awesome</span>
+                        </p>
+            
+                </div>
+                </section>
+                <section>
+                    <div class="window">
+                        <p>music</p>
+                        <div id="musicplayer" class="content">
+                            <div class="player"> 
+                                <span id="current">0:00</span>
+                                <div id="progress-container">
+                                    <div id="progress-bar">
+                                    </div>
+                                </div>
+                                <span id="duration">0:00</span>
+                            </div>
+                            <p>
+                                <button id="playbtn" onclick="buttonClicked()">play</button>
+                                |
+                                <label for="volume">volume</label>
+                                <input type="range" id="volume" min="0" max="100" value="50">
+                            </p>
+                        </div>
+                    </div>
+                </section>
+            </div>    
+        </main>
+        <!--embed title="audio" height=200px width=200px src="https://file.garden/aUdBnJWKrwuu7ALF/internet%20hub%20main%20page.mp3"-->
+    
+        <audio id="audio" autoplay muted loop>
+            <source src="https://file.garden/aUdBnJWKrwuu7ALF/internet%20hub%20main%20page.mp3" type=audio/mpeg>
+        </audio>    
+        <script src="script.js"></script>
+    </body>
+</html>

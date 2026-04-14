@@ -1,7 +1,7 @@
 var backgrounds = [
-    'assets/images/woods.JPG',
-    'assets/images/space.JPG',
-    'assets/images/skyline.jpg'
+    'assets/backgrounds/woods.JPG',
+    'assets/backgrounds/space.JPG',
+    'assets/backgrounds/skyline.jpg'
 ];
 
 var choice = backgrounds[Math.floor(Math.random() * backgrounds.length)];

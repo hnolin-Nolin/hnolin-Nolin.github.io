@@ -1,0 +1,124 @@
+body {
+  font-family: "MS Gothic", WinXP, Tahoma, sans-serif;
+  max-width: 640px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  background: #080811;
+  color: #e0e0e0;
+}
+
+.wrap {
+  padding: 1rem 0;
+}
+
+.field {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  font-size: 13px;
+  color: #aaa;
+  margin-bottom: 4px;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="number"],
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 6px 10px;
+  font-size: 14px;
+  font-family: "MS Gothic", WinXP, Tahoma, sans-serif;
+  border: 1px solid #444;
+  background: #2a2a2a;
+  color: #e0e0e0;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="number"]:focus,
+textarea:focus {
+  outline: none;
+  border-color: #888;
+}
+
+textarea {
+  min-height: 160px;
+  resize: vertical;
+}
+
+.tag-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.tag-row input {
+  flex: 1;
+}
+
+.remove-btn {
+  background-color: #111;
+  border: 1px solid #444;
+  padding: 4px 10px;
+  cursor: pointer;
+  font-size: 13px;
+  color: #aaa;
+  flex-shrink: 0;
+  font-family: "MS Gothic", WinXP, Tahoma, sans-serif;
+}
+
+button {
+  background-color: none;
+  border: 1px solid #444;
+  padding: 6px 14px;
+  font-size: 14px;
+  font-family: "MS Gothic", WinXP, Tahoma, sans-serif;
+  cursor: pointer;
+  color: #e0e0e0;
+}
+
+#add-tag {
+  font-size: 13px;
+  padding: 4px 12px;
+  background-color: #111;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid #333;
+  margin: 1.5rem 0;
+}
+
+.filename-preview {
+  font-size: 13px;
+  color: #ffffff;
+  margin-top: 4px;
+}
+
+#output-wrap {
+  margin-top: 1.5rem;
+}
+
+#xml-out {
+  font-family: monospace;
+  font-size: 13px;
+  min-height: 220px;
+  background: #111;
+  color: #e0e0e0;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 0.75rem;
+  flex-wrap: wrap;
+}
+
+#copy-btn.copied {
+  color: green;
+  border-color: green;
+}
