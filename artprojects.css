@@ -422,7 +422,7 @@ button.type.active {
     overflow: hidden;
     background-color:#000000;
     background-image: url("photogallery/compressed/DSC02089-compressed.jpg");
-    background-size: cover;
+    background-size: 120%;
     
 
     /* box-shadow: 1px 1px #fff; */
@@ -518,3 +518,122 @@ button.type.active {
     width: 252;
     height: auto;
 }
+
+@media (max-width: 768px) {
+
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #filter button{
+        height: 60px;
+    }
+
+    #currentprojects, #d2026, #d2025, #d2024 {
+        flex-wrap: wrap;
+        align-content: center;
+        text-align: center;
+        
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-link {
+        width: 80%;
+        height: 40px;
+        margin: 0;
+        box-shadow: 2px 2px #545454 inset, 2px 2px #000000;
+        background-color: #3B3E46;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .miniheader .nav-link {
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    #art {
+        height: fit-content;
+    }
+
+    #art p {
+        text-align: center;
+        justify-self: center;
+        font-size: 20px;
+    }
+
+    .miniheader {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .announcements {
+        width: 100%;
+        justify-self: center;
+        align-self: center;
+        gap: 15px;
+    }
+
+    .arrow {
+        width: 10%;
+        height: 10%;
+    }
+
+    .slide {
+        object-fit: contain;
+    }
+
+    .minimain {
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        justify-content: center;
+        align-content: center;
+        gap: 40px;
+    }
+
+    .minimain div {
+        position: relative;
+        width: 100%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+    }
+
+    .minimain h2 {
+        position: relative;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        margin-bottom: 10px;
+    }
+
+    .announcementtext {
+        display: none;
+    }
+
+    .hero {
+        width: 100%;
+        height: auto;
+    }
+
+    #bdcsheader {
+        flex-direction: column;
+        align-content: center;
+        height: fit-content;
+    }
+
+    #bdcsplayer {
+        width: 100%;
+        height: 600px;
+    }
+
+}
+

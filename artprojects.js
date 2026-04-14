@@ -128,7 +128,7 @@ function updateFilters() {
 
     const visible = projectMatch && typeMatch;
 
-    link.style.display = visible ? 'block' : 'none';
+    link.style.display = visible ? 'flex' : 'none';
 
     if (!visible && link.classList.contains('active')) {
       updateURL('intro');
@@ -144,7 +144,7 @@ function updateFilters() {
 
     div.style.display = anyVisible ? 'flex' : 'none';
     if (heading && heading.tagName === 'P') {
-      heading.style.display = anyVisible ? 'block' : 'none';
+      heading.style.display = anyVisible ? 'flex' : 'none';
     }
   });
 }
