@@ -265,6 +265,12 @@ button.type.active {
     left: 20px;
     bottom: 5px;
 }
+
+h2.simplecontainer {
+    text-align: center;
+    margin: 0 auto;
+}
+
 .description .content {
     margin: 0;
 }
@@ -578,6 +584,12 @@ button.type.active {
         margin-top: 20px;
     }
 
+    h2.simplecontainer {
+        text-align: center;
+        margin: 0 auto;
+        width: 90%;
+    }
+
     .announcements {
         width: 100%;
         justify-self: center;
@@ -601,15 +613,19 @@ button.type.active {
         justify-content: center;
         align-content: center;
         gap: 40px;
+        width: 100%;
+        margin-left: 0;
     }
 
     .minimain div {
         position: relative;
-        width: 100%;
+        width: 90%;
         left: 0;
         right: 0;
         bottom: 0;
         top: 0;
+        width: 95%;
+        align-self: center;
     }
 
     .minimain h2 {
