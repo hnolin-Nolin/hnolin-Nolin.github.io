@@ -1,13 +1,11 @@
 // ======= overlay =======
 
 function openPhoto(el) {
-  // set the overlay image to the full res version and show it
-  document.getElementById('overlay-img').src = el.src;
+  document.getElementById('overlay-img').src = el.dataset.full;
   document.getElementById('overlay').classList.add('visible');
 }
 
 function closePhoto() {
-  // hide the overlay and reset zoom
   document.getElementById('overlay').classList.remove('visible');
   resetZoom();
 }

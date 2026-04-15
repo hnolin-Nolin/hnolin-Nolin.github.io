@@ -187,3 +187,59 @@ mark {
     text-align: center;
     margin-top: 250px;
 }
+
+@media (max-width: 768px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    main h2, main .simplecontainer {
+        position: relative;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        align-self: center;
+        height: fit-content;
+    }
+
+    #filtergroup {
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        width: 100%;
+        align-content: center;
+        justify-content: center;
+        left: 0;
+        bottom: 0;
+    }
+
+    #options {
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        width: 95%;
+        align-content: center;
+        justify-content: center;
+    }
+
+    #filtergroup .simplecontainer {
+        justify-self: center;
+        align-self: center;
+        width: 100%;
+    }
+
+    #blogcontainer {
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        width: 95%;
+        align-content: center;
+        justify-content: center;
+        height: 600px;
+        margin-bottom: 5px;
+    }
+}

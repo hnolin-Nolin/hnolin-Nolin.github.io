@@ -427,8 +427,8 @@ h2.simplecontainer {
     margin: 0 auto;
     overflow: hidden;
     background-color:#000000;
-    background-image: url("photogallery/compressed/DSC02089-compressed.jpg");
-    background-size: 120%;
+    background-image: url("assets/images/carouselbackground.png");
+    background-size: 100%;
     
 
     /* box-shadow: 1px 1px #fff; */
@@ -675,7 +675,7 @@ h2.simplecontainer {
     }
 
     #musicplayer {
-        left: 20%;
+        left: 12.5%;
     }
 
 }

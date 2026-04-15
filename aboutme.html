@@ -22,6 +22,7 @@
         <script src="musicplayer.js"></script>
         <script src="backgrounds.js"></script>
         <script src="popup.js"></script>
+        <script src="openphoto.js"></script>
     </head>
     <body>
         <a class="headeranchor" href="index.html">
@@ -51,7 +52,7 @@
         <main>
             <h2 id="metitle">who am i?</h2>
             <section id="mebox" class="simplecontainer">
-                <img id="me" src="assets/images/me.jpg" alt="me">
+                <img src="assets/images/me-thumb.jpg" data-full="assets/images/me.jpg" alt="me" id="me" onclick="openPhoto(this)">
                 <p>-*- harrison | 20 | awesome -*-</p>
                 <ul id="socialmedia" class="linklist">
                     <li><a href="https://www.instagram.com/greyhillstarslie/" data-text="instagram" target="_blank">instagram</a></li>
@@ -101,10 +102,10 @@
                 <div id="friendbox" class="content aboutmecontent">
                     <div id="lindsey" class="friendquote">
                         <div class="friendportrait">
-                            <img src="assets/images/anthony.jpg" alt="anthony" class="friendphoto">
-                            <p>anthony</p>
+                            <img src="assets/images/kenzie.png" alt="anthony" class="friendphoto">
+                            <p>kenzie</p>
                         </div>
-                        <p>"SJDOASJPOD ASOD PASJD POAISJD IASJD POIASJD POASJ DOA JDSAOI DJASOID JASPOIDJ OASIMDIOPSAMDOIPASMDMASPODASIPODMPASOD"</p>
+                        <p>"A very honest and understanding guy, very passionate about what he loves. Always brings silly and fun vibes to da function"</p>
                     </div>
                     <div id="kenzie" class="friendquote">
                         <div class="friendportrait">
@@ -115,10 +116,10 @@
                     </div>
                     <div id="parker" class="friendquote">
                         <div class="friendportrait">
-                            <img src="assets/images/anthony.jpg" alt="anthony" class="friendphoto">
-                            <p>anthony</p>
+                            <img src="assets/images/lindsey.png" alt="anthony" class="friendphoto">
+                            <p>lindsey</p>
                         </div>
-                        <p>"okay"</p>
+                        <p>"gay"</p>
                     </div>
                 </div>
             </section>
@@ -233,7 +234,11 @@
                 </div>
             </dialog>
         </div>
-            
+
+        <div id="overlay" onclick="closePhoto()">
+            <img id="overlay-img" src="" onclick="toggleZoom(event)">
+        </div>
+
         <input type="checkbox" id="musicToggle" hidden>
         <label for="musicToggle" id="musicplayer-tab">music</label>
 

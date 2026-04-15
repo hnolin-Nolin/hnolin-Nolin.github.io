@@ -89,3 +89,32 @@ main {
     min-width: 50px;
     text-align: center;
 }
+
+@media (max-width: 768px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    main h2, main .simplecontainer {
+        position: relative;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        align-self: center;
+        height: fit-content;
+    }
+
+    #photocontainer {
+        width: 95%;
+        height: fit-content;
+        margin-bottom: 15px;
+    }
+
+    #photogrid {
+        height: fit-content;
+    }
+}

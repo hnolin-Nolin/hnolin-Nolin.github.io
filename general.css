@@ -12,6 +12,11 @@ body {
     cursor: url("assets/cursor/Mystery\ arrow.cur"), auto;
 }
 
+@font-face {
+   font-family: "WinXP";
+   src: url('https://xobyte.org/files/fonts/win.woff');
+}
+
 h1 {
     color: #FFF;
     text-align: center;
@@ -374,4 +379,58 @@ footer {
 .slide.active {
     opacity: 1;
     pointer-events: auto;
+}
+
+@media (max-width: 768px) {
+
+    body {
+        background-size: fill;
+    }
+
+    nav {
+        width: 90%
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    button {
+        box-shadow: 2px 2px #545454 inset, 2px 2px #000000;
+        background-color: #3B3E46;
+    }
+
+    .nav-link {
+        width: 80%;
+        height: 40px;
+        margin: 0;
+        box-shadow: 2px 2px #545454 inset, 2px 2px #000000;
+        background-color: #3B3E46;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #musicplayer-tab {
+        bottom: 0;
+        left: 0;
+        right: 0;
+        
+        left: 50%;
+        transform: translateX(-50%);
+        width: fit-content;
+    }
+
+    #musicplayer {
+        bottom: 0;
+        left: 0;
+        right: 0;
+        
+        left: 50%;
+        transform: translateX(-50%);
+        width: fit-content;
+    }
+
 }
