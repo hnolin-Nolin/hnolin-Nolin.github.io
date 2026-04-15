@@ -425,6 +425,7 @@ dialog::backdrop {
 /* ======= graphic ======= */
 
 #anthony-img {
+    display: none;
     position: relative;
     right: 50px;
     grid-column: 3;
