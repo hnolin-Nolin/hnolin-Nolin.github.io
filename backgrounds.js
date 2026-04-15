@@ -1,6 +1,6 @@
 var backgrounds = [
-    'assets/backgrounds/woods.JPG',
-    'assets/backgrounds/space.JPG',
+    'assets/backgrounds/woods.jpg',
+    'assets/backgrounds/space.jpg',
     'assets/backgrounds/skyline.jpg'
 ];
 

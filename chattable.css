@@ -98,11 +98,11 @@ body, html {
   min-height: 20px;
 }
 #background::-webkit-scrollbar-button:single-button:vertical:increment, #background ::-webkit-scrollbar-button:single-button:vertical:increment {
-  background-image: url(https://xp.xobyte.org/resources/down.PNG);
+  background-image: url(https://xp.xobyte.org/resources/down.png);
   background-size: 100% 100%;
 }
 #background::-webkit-scrollbar-button:single-button:vertical:decrement, #background ::-webkit-scrollbar-button:single-button:vertical:decrement {
-  background-image: url(https://xp.xobyte.org/resources/up.PNG);
+  background-image: url(https://xp.xobyte.org/resources/up.png);
   background-size: 100% 100%;
 }
 #background::-webkit-scrollbar-button:hover, #background ::-webkit-scrollbar-button:hover {
