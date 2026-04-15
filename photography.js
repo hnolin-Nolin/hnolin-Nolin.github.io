@@ -55,7 +55,7 @@ function shufflePhotos() {
 let currentPage = 1;
 
 function getPhotosPerPage() {
-  if (window.matchMedia('(max-width: 768px)').matches) return 6;
+  if (window.matchMedia('(max-width: 768px)').matches) return 2;
   return 24;
 }
 

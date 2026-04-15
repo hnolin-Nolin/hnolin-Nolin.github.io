@@ -388,7 +388,8 @@ footer {
     }
 
     nav {
-        width: 90%
+        width: 90%;
+        font-size: 12px;
     }
 
     main {

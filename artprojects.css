@@ -669,14 +669,5 @@ h2.simplecontainer {
         width: 100%;
         height: 600px;
     }
-
-    #musicplayer-tab {
-        right: 40%;
-    }
-
-    #musicplayer {
-        left: 12.5%;
-    }
-
 }
 
